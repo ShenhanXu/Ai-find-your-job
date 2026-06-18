@@ -1,0 +1,27 @@
+{
+  "jobs": [
+    {
+      "id": "backend-newgrad",
+      "title": "Software Engineer I, Cloud Backend",
+      "location": "Redmond, WA",
+      "url": "https://cascade-cloud.example/jobs/backend-newgrad",
+      "description": "Develop Java and Python backend services for cloud automation. Work includes REST APIs, SQL, CI/CD, observability, and production reliability.",
+      "level": "new-grad",
+      "workMode": "hybrid",
+      "requiredSkills": ["Java", "Python", "REST API", "SQL", "CI/CD", "Testing"],
+      "niceToHaveSkills": ["AWS", "Observability", "Docker", "System Design"]
+    },
+    {
+      "id": "platform-senior",
+      "title": "Senior Software Engineer, Platform Reliability",
+      "location": "Seattle, WA",
+      "url": "https://cascade-cloud.example/jobs/platform-reliability",
+      "description": "Own Kubernetes platform reliability, distributed systems, observability, incident response, Linux operations, and cloud infrastructure at scale.",
+      "level": "senior",
+      "workMode": "hybrid",
+      "requiredSkills": ["Go", "Kubernetes", "Distributed Systems", "Observability", "Linux", "System Design"],
+      "niceToHaveSkills": ["AWS", "Terraform", "Kafka", "Incident Response"]
+    }
+  ]
+}
+

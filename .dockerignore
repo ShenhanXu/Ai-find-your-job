@@ -1,0 +1,13 @@
+.git
+.DS_Store
+.env
+.env.local
+node_modules
+.next
+__pycache__
+.pytest_cache
+.venv
+postgres-data
+redis-data
+*.log
+

@@ -1,0 +1,1136 @@
+[
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "websiteUrl": "https://www.amazon.com",
+    "knownCareerUrl": "https://www.amazon.jobs",
+    "headquarters": "Seattle, WA",
+    "industry": "Cloud, ecommerce, devices",
+    "confidenceScore": 0.98
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "websiteUrl": "https://www.microsoft.com",
+    "knownCareerUrl": "https://careers.microsoft.com",
+    "headquarters": "Redmond, WA",
+    "industry": "Cloud, software, AI",
+    "confidenceScore": 0.98
+  },
+  {
+    "id": "google",
+    "name": "Google",
+    "websiteUrl": "https://www.google.com",
+    "knownCareerUrl": "https://www.google.com/about/careers/applications/",
+    "headquarters": "Kirkland/Seattle area offices",
+    "industry": "Search, cloud, ads, AI",
+    "confidenceScore": 0.95
+  },
+  {
+    "id": "meta",
+    "name": "Meta",
+    "websiteUrl": "https://www.meta.com",
+    "knownCareerUrl": "https://www.metacareers.com/jobs/",
+    "headquarters": "Bellevue/Seattle area offices",
+    "industry": "Social, AI, infrastructure",
+    "confidenceScore": 0.95
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "websiteUrl": "https://www.apple.com",
+    "knownCareerUrl": "https://jobs.apple.com",
+    "headquarters": "Seattle area offices",
+    "industry": "Devices, services, software",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "salesforce",
+    "name": "Salesforce",
+    "websiteUrl": "https://www.salesforce.com",
+    "knownCareerUrl": "https://careers.salesforce.com",
+    "headquarters": "Bellevue/Seattle area offices",
+    "industry": "CRM, cloud software",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "oracle",
+    "name": "Oracle",
+    "websiteUrl": "https://www.oracle.com",
+    "knownCareerUrl": "https://careers.oracle.com",
+    "headquarters": "Seattle area offices",
+    "industry": "Cloud, databases, enterprise software",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "snowflake",
+    "name": "Snowflake",
+    "websiteUrl": "https://www.snowflake.com",
+    "knownCareerUrl": "https://careers.snowflake.com",
+    "headquarters": "Bellevue, WA office",
+    "industry": "Data cloud",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "databricks",
+    "name": "Databricks",
+    "websiteUrl": "https://www.databricks.com",
+    "knownCareerUrl": "https://www.databricks.com/company/careers",
+    "headquarters": "Bellevue, WA office",
+    "industry": "Data and AI platform",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "stripe",
+    "name": "Stripe",
+    "websiteUrl": "https://stripe.com",
+    "knownCareerUrl": "https://stripe.com/jobs",
+    "headquarters": "Seattle area office",
+    "industry": "Payments infrastructure",
+    "confidenceScore": 0.88
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "websiteUrl": "https://www.figma.com",
+    "knownCareerUrl": "https://www.figma.com/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "Design collaboration software",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "expedia-group",
+    "name": "Expedia Group",
+    "websiteUrl": "https://www.expediagroup.com",
+    "knownCareerUrl": "https://careers.expediagroup.com/jobs/",
+    "headquarters": "Seattle, WA",
+    "industry": "Travel technology",
+    "confidenceScore": 0.95
+  },
+  {
+    "id": "t-mobile",
+    "name": "T-Mobile",
+    "websiteUrl": "https://www.t-mobile.com",
+    "knownCareerUrl": "https://careers.t-mobile.com/job-search/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Telecom and digital platforms",
+    "confidenceScore": 0.92
+  },
+  {
+    "id": "zillow",
+    "name": "Zillow",
+    "websiteUrl": "https://www.zillow.com",
+    "knownCareerUrl": "https://www.zillowgroup.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Real estate technology",
+    "confidenceScore": 0.92
+  },
+  {
+    "id": "redfin",
+    "name": "Redfin",
+    "websiteUrl": "https://www.redfin.com",
+    "knownCareerUrl": "https://www.redfin.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Real estate technology",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "remitly",
+    "name": "Remitly",
+    "websiteUrl": "https://www.remitly.com",
+    "knownCareerUrl": "https://careers.remitly.com",
+    "headquarters": "Seattle, WA",
+    "industry": "Fintech",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "rover",
+    "name": "Rover",
+    "websiteUrl": "https://www.rover.com",
+    "knownCareerUrl": "https://www.rover.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Marketplace software",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "smartsheet",
+    "name": "Smartsheet",
+    "websiteUrl": "https://www.smartsheet.com",
+    "knownCareerUrl": "https://www.smartsheet.com/careers",
+    "headquarters": "Bellevue, WA",
+    "industry": "Work management software",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "docusign",
+    "name": "DocuSign",
+    "websiteUrl": "https://www.docusign.com",
+    "knownCareerUrl": "https://www.docusign.com/company/careers",
+    "headquarters": "Seattle, WA office",
+    "industry": "Agreement cloud",
+    "confidenceScore": 0.85
+  },
+  {
+    "id": "tableau",
+    "name": "Tableau",
+    "websiteUrl": "https://www.tableau.com",
+    "knownCareerUrl": "https://www.salesforce.com/company/careers/jobs/?search=Tableau",
+    "headquarters": "Seattle, WA",
+    "industry": "Analytics software",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "outreach",
+    "name": "Outreach",
+    "websiteUrl": "https://www.outreach.io",
+    "knownCareerUrl": "https://www.outreach.io/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Sales engagement software",
+    "confidenceScore": 0.88
+  },
+  {
+    "id": "highspot",
+    "name": "Highspot",
+    "websiteUrl": "https://www.highspot.com",
+    "knownCareerUrl": "https://www.highspot.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Sales enablement software",
+    "confidenceScore": 0.88
+  },
+  {
+    "id": "pitchbook",
+    "name": "PitchBook",
+    "websiteUrl": "https://pitchbook.com",
+    "knownCareerUrl": "https://pitchbook.com/about/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Financial data software",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "axon",
+    "name": "Axon",
+    "websiteUrl": "https://www.axon.com",
+    "knownCareerUrl": "https://www.axon.com/careers",
+    "headquarters": "Seattle, WA office",
+    "industry": "Public safety technology",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "blue-origin",
+    "name": "Blue Origin",
+    "websiteUrl": "https://www.blueorigin.com",
+    "knownCareerUrl": "https://www.blueorigin.com/careers",
+    "headquarters": "Kent, WA",
+    "industry": "Aerospace software and systems",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "bungie",
+    "name": "Bungie",
+    "websiteUrl": "https://www.bungie.net",
+    "knownCareerUrl": "https://careers.bungie.com/jobs",
+    "headquarters": "Bellevue, WA",
+    "industry": "Game technology",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "valve",
+    "name": "Valve",
+    "websiteUrl": "https://www.valvesoftware.com",
+    "knownCareerUrl": "https://www.valvesoftware.com/en/jobs",
+    "headquarters": "Bellevue, WA",
+    "industry": "Game platforms and software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "offerup",
+    "name": "OfferUp",
+    "websiteUrl": "https://offerup.com",
+    "knownCareerUrl": "https://about.offerup.com/careers/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Marketplace software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "seekout",
+    "name": "SeekOut",
+    "websiteUrl": "https://www.seekout.com",
+    "knownCareerUrl": "https://www.seekout.com/careers",
+    "headquarters": "Bellevue, WA",
+    "industry": "Talent search software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "pulumi",
+    "name": "Pulumi",
+    "websiteUrl": "https://www.pulumi.com",
+    "knownCareerUrl": "https://www.pulumi.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Cloud infrastructure software",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "temporal",
+    "name": "Temporal",
+    "websiteUrl": "https://temporal.io",
+    "knownCareerUrl": "https://temporal.io/careers",
+    "headquarters": "Bellevue, WA office",
+    "industry": "Developer infrastructure",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "impinj",
+    "name": "Impinj",
+    "websiteUrl": "https://www.impinj.com",
+    "knownCareerUrl": "https://www.impinj.com/about-us/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "IoT and platform software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "qumulo",
+    "name": "Qumulo",
+    "websiteUrl": "https://qumulo.com",
+    "knownCareerUrl": "https://qumulo.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Data storage software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "extrahop",
+    "name": "ExtraHop",
+    "websiteUrl": "https://www.extrahop.com",
+    "knownCareerUrl": "https://www.extrahop.com/company/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Security and network software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "avalara",
+    "name": "Avalara",
+    "websiteUrl": "https://www.avalara.com",
+    "knownCareerUrl": "https://careers.avalara.com/careers-home/jobs",
+    "headquarters": "Seattle, WA",
+    "industry": "Tax compliance software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "panopto",
+    "name": "Panopto",
+    "websiteUrl": "https://www.panopto.com",
+    "knownCareerUrl": "https://www.panopto.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Video platform software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "spacex-redmond",
+    "name": "SpaceX",
+    "websiteUrl": "https://www.spacex.com",
+    "knownCareerUrl": "https://www.spacex.com/careers/jobs/",
+    "headquarters": "Redmond, WA office",
+    "industry": "Aerospace software and network systems",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "nintendo-of-america",
+    "name": "Nintendo of America",
+    "websiteUrl": "https://www.nintendo.com",
+    "knownCareerUrl": "https://careers.nintendo.com/",
+    "headquarters": "Redmond, WA",
+    "industry": "Game platforms and software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "adobe",
+    "name": "Adobe",
+    "websiteUrl": "https://www.adobe.com",
+    "knownCareerUrl": "https://careers.adobe.com",
+    "headquarters": "Seattle area office",
+    "industry": "Creative and enterprise software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "airbnb",
+    "name": "Airbnb",
+    "websiteUrl": "https://www.airbnb.com",
+    "knownCareerUrl": "https://careers.airbnb.com/positions/",
+    "headquarters": "Seattle area office",
+    "industry": "Marketplace software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "amd",
+    "name": "AMD",
+    "websiteUrl": "https://www.amd.com",
+    "knownCareerUrl": "https://careers.amd.com/careers-home/",
+    "headquarters": "Seattle area office",
+    "industry": "Semiconductors and systems software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "amperity",
+    "name": "Amperity",
+    "websiteUrl": "https://amperity.com",
+    "knownCareerUrl": "https://amperity.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Customer data platform",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "websiteUrl": "https://www.anthropic.com",
+    "knownCareerUrl": "https://www.anthropic.com/careers",
+    "headquarters": "Seattle area office",
+    "industry": "AI research and products",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "apptio",
+    "name": "Apptio",
+    "websiteUrl": "https://www.apptio.com",
+    "knownCareerUrl": "https://www.apptio.com/careers/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Cloud financial management software",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "atlassian",
+    "name": "Atlassian",
+    "websiteUrl": "https://www.atlassian.com",
+    "knownCareerUrl": "https://www.atlassian.com/company/careers",
+    "headquarters": "Seattle area office",
+    "industry": "Developer and collaboration software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "block",
+    "name": "Block",
+    "websiteUrl": "https://block.xyz",
+    "knownCareerUrl": "https://block.xyz/careers",
+    "headquarters": "Seattle area office",
+    "industry": "Fintech platform software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "boeing",
+    "name": "Boeing",
+    "websiteUrl": "https://www.boeing.com",
+    "knownCareerUrl": "https://jobs.boeing.com/",
+    "headquarters": "Greater Seattle engineering offices",
+    "industry": "Aerospace software and systems",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "carbon-robotics",
+    "name": "Carbon Robotics",
+    "websiteUrl": "https://carbonrobotics.com",
+    "knownCareerUrl": "https://carbonrobotics.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Robotics and AI",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "carta",
+    "name": "Carta",
+    "websiteUrl": "https://carta.com",
+    "knownCareerUrl": "https://carta.com/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "Fintech and equity management software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "chainguard",
+    "name": "Chainguard",
+    "websiteUrl": "https://www.chainguard.dev",
+    "knownCareerUrl": "https://www.chainguard.dev/careers",
+    "headquarters": "Kirkland/Seattle area presence",
+    "industry": "Software supply chain security",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "chewy",
+    "name": "Chewy",
+    "websiteUrl": "https://www.chewy.com",
+    "knownCareerUrl": "https://careers.chewy.com/",
+    "headquarters": "Bellevue, WA office",
+    "industry": "Ecommerce platform software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "code-org",
+    "name": "Code.org",
+    "websiteUrl": "https://code.org",
+    "knownCareerUrl": "https://code.org/about/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Education technology",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "compass",
+    "name": "Compass",
+    "websiteUrl": "https://www.compass.com",
+    "knownCareerUrl": "https://www.compass.com/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "Real estate technology",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "costco",
+    "name": "Costco",
+    "websiteUrl": "https://www.costco.com",
+    "knownCareerUrl": "https://careers.costco.com/jobs",
+    "headquarters": "Issaquah, WA",
+    "industry": "Retail technology and ecommerce",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "coupang",
+    "name": "Coupang",
+    "websiteUrl": "https://www.coupang.com",
+    "knownCareerUrl": "https://www.coupang.jobs/",
+    "headquarters": "Seattle area office",
+    "industry": "Ecommerce and logistics software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "crowdstrike",
+    "name": "CrowdStrike",
+    "websiteUrl": "https://www.crowdstrike.com",
+    "knownCareerUrl": "https://www.crowdstrike.com/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "Cybersecurity software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "datarobot",
+    "name": "DataRobot",
+    "websiteUrl": "https://www.datarobot.com",
+    "knownCareerUrl": "https://www.datarobot.com/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "AI platform software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "defined-ai",
+    "name": "Defined.ai",
+    "websiteUrl": "https://www.defined.ai",
+    "knownCareerUrl": "https://www.defined.ai/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "AI data platform",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "discord",
+    "name": "Discord",
+    "websiteUrl": "https://discord.com",
+    "knownCareerUrl": "https://discord.com/careers",
+    "headquarters": "Seattle area office",
+    "industry": "Consumer communication software",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "doordash",
+    "name": "DoorDash",
+    "websiteUrl": "https://www.doordash.com",
+    "knownCareerUrl": "https://careers.doordash.com/",
+    "headquarters": "Seattle area office",
+    "industry": "Logistics marketplace software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "dreambox-learning",
+    "name": "DreamBox Learning",
+    "websiteUrl": "https://www.dreambox.com",
+    "knownCareerUrl": "https://www.dreambox.com/careers",
+    "headquarters": "Bellevue, WA",
+    "industry": "Education technology",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "echodyne",
+    "name": "Echodyne",
+    "websiteUrl": "https://www.echodyne.com",
+    "knownCareerUrl": "https://www.echodyne.com/careers",
+    "headquarters": "Kirkland, WA",
+    "industry": "Radar and autonomy software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "edge-delta",
+    "name": "Edge Delta",
+    "websiteUrl": "https://edgedelta.com",
+    "knownCareerUrl": "https://edgedelta.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Observability software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "epic-games",
+    "name": "Epic Games",
+    "websiteUrl": "https://www.epicgames.com",
+    "knownCareerUrl": "https://www.epicgames.com/site/en-US/careers/jobs",
+    "headquarters": "Seattle area office",
+    "industry": "Game engine and platform software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "f5",
+    "name": "F5",
+    "websiteUrl": "https://www.f5.com",
+    "knownCareerUrl": "https://www.f5.com/company/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Security and application delivery software",
+    "confidenceScore": 0.9
+  },
+  {
+    "id": "faire",
+    "name": "Faire",
+    "websiteUrl": "https://www.faire.com",
+    "knownCareerUrl": "https://www.faire.com/careers",
+    "headquarters": "Seattle area office",
+    "industry": "Marketplace software",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "flexe",
+    "name": "Flexe",
+    "websiteUrl": "https://www.flexe.com",
+    "knownCareerUrl": "https://www.flexe.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Logistics software",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "flyhomes",
+    "name": "Flyhomes",
+    "websiteUrl": "https://www.flyhomes.com",
+    "knownCareerUrl": "https://www.indeed.com/cmp/Flyhomes",
+    "headquarters": "Seattle, WA",
+    "industry": "Real estate technology",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "fred-hutch",
+    "name": "Fred Hutch",
+    "websiteUrl": "https://www.fredhutch.org",
+    "knownCareerUrl": "https://www.fredhutch.org/en/about/careers.html",
+    "headquarters": "Seattle, WA",
+    "industry": "Biomedical data and research software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "glowforge",
+    "name": "Glowforge",
+    "websiteUrl": "https://glowforge.com",
+    "knownCareerUrl": "https://glowforge.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Hardware and creative software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "hiya",
+    "name": "Hiya",
+    "websiteUrl": "https://www.hiya.com",
+    "knownCareerUrl": "https://www.hiya.com/company/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Voice security software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "icertis",
+    "name": "Icertis",
+    "websiteUrl": "https://www.icertis.com",
+    "knownCareerUrl": "https://www.icertis.com/company/careers/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Contract intelligence software",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "inrix",
+    "name": "INRIX",
+    "websiteUrl": "https://inrix.com",
+    "knownCareerUrl": "https://inrix.com/careers/",
+    "headquarters": "Kirkland, WA",
+    "industry": "Mobility data software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "iunu",
+    "name": "IUNU",
+    "websiteUrl": "https://iunu.com",
+    "knownCareerUrl": "https://careers.iunu.com/",
+    "headquarters": "Seattle, WA",
+    "industry": "Agricultural AI software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "karat",
+    "name": "Karat",
+    "websiteUrl": "https://karat.com",
+    "knownCareerUrl": "https://karat.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Technical interview platform",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "levelten-energy",
+    "name": "LevelTen Energy",
+    "websiteUrl": "https://www.leveltenenergy.com",
+    "knownCareerUrl": "https://www.leveltenenergy.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Energy marketplace software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "lyft",
+    "name": "Lyft",
+    "websiteUrl": "https://www.lyft.com",
+    "knownCareerUrl": "https://www.lyft.com/careers",
+    "headquarters": "Seattle area office",
+    "industry": "Mobility marketplace software",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "maestro-ai",
+    "name": "Maestro AI",
+    "websiteUrl": "https://getmaestro.ai",
+    "knownCareerUrl": "https://getmaestro.ai/careers",
+    "headquarters": "Seattle/Remote",
+    "industry": "AI developer tooling",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "motherduck",
+    "name": "MotherDuck",
+    "websiteUrl": "https://motherduck.com",
+    "knownCareerUrl": "https://motherduck.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Cloud analytics database",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "moz",
+    "name": "Moz",
+    "websiteUrl": "https://moz.com",
+    "knownCareerUrl": "https://moz.com/about/jobs",
+    "headquarters": "Seattle, WA",
+    "industry": "SEO software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "nintex",
+    "name": "Nintex",
+    "websiteUrl": "https://www.nintex.com",
+    "knownCareerUrl": "https://www.nintex.com/careers/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Process automation software",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA",
+    "websiteUrl": "https://www.nvidia.com",
+    "knownCareerUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "AI hardware and systems software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "okta",
+    "name": "Okta",
+    "websiteUrl": "https://www.okta.com",
+    "knownCareerUrl": "https://www.okta.com/company/careers/",
+    "headquarters": "Bellevue/Seattle area office",
+    "industry": "Identity and security software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "websiteUrl": "https://openai.com",
+    "knownCareerUrl": "https://openai.com/careers/search",
+    "headquarters": "Seattle office",
+    "industry": "AI research and products",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "overland-ai",
+    "name": "Overland AI",
+    "websiteUrl": "https://www.overland.ai",
+    "knownCareerUrl": "https://www.overland.ai/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Autonomous systems software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "payscale",
+    "name": "Payscale",
+    "websiteUrl": "https://www.payscale.com",
+    "knownCareerUrl": "https://www.payscale.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Compensation data software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "plaid",
+    "name": "Plaid",
+    "websiteUrl": "https://plaid.com",
+    "knownCareerUrl": "https://plaid.com/careers/",
+    "headquarters": "Seattle office",
+    "industry": "Financial data platform",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "pokemon-company-international",
+    "name": "The Pokemon Company International",
+    "websiteUrl": "https://corporate.pokemon.com",
+    "knownCareerUrl": "https://corporate.pokemon.com/en-us/careers/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Game and entertainment technology",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "porch-group",
+    "name": "Porch Group",
+    "websiteUrl": "https://porchgroup.com",
+    "knownCareerUrl": "https://porchgroup.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Home services marketplace software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "protect-ai",
+    "name": "Protect AI",
+    "websiteUrl": "https://protectai.com",
+    "knownCareerUrl": "https://builtin.com/company/protect-ai/jobs",
+    "headquarters": "Seattle, WA",
+    "industry": "AI security software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "qualtrics",
+    "name": "Qualtrics",
+    "websiteUrl": "https://www.qualtrics.com",
+    "knownCareerUrl": "https://www.qualtrics.com/careers/us/en",
+    "headquarters": "Seattle area office",
+    "industry": "Experience management software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "read-ai",
+    "name": "Read AI",
+    "websiteUrl": "https://www.read.ai",
+    "knownCareerUrl": "https://www.read.ai/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "AI productivity software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "rec-room",
+    "name": "Rec Room",
+    "websiteUrl": "https://recroom.com",
+    "knownCareerUrl": "https://recroom.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Social gaming software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "recurrent-ai",
+    "name": "Recurrent",
+    "websiteUrl": "https://www.recurrentauto.com",
+    "knownCareerUrl": "https://www.recurrentauto.com/about",
+    "headquarters": "Seattle, WA",
+    "industry": "Automotive data software",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "rei",
+    "name": "REI",
+    "websiteUrl": "https://www.rei.com",
+    "knownCareerUrl": "https://www.rei.jobs/",
+    "headquarters": "Issaquah, WA",
+    "industry": "Retail technology and ecommerce",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "riot-games",
+    "name": "Riot Games",
+    "websiteUrl": "https://www.riotgames.com",
+    "knownCareerUrl": "https://www.riotgames.com/en/work-with-us/jobs",
+    "headquarters": "Seattle area office",
+    "industry": "Game software",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "robinhood",
+    "name": "Robinhood",
+    "websiteUrl": "https://robinhood.com",
+    "knownCareerUrl": "https://careers.robinhood.com/",
+    "headquarters": "Seattle area office",
+    "industry": "Fintech software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "sap-concur",
+    "name": "SAP Concur",
+    "websiteUrl": "https://www.concur.com",
+    "knownCareerUrl": "https://jobs.sap.com/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Travel and expense management software",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "servicenow",
+    "name": "ServiceNow",
+    "websiteUrl": "https://www.servicenow.com",
+    "knownCareerUrl": "https://careers.servicenow.com/",
+    "headquarters": "Seattle area office",
+    "industry": "Enterprise workflow software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "shipium",
+    "name": "Shipium",
+    "websiteUrl": "https://www.shipium.com",
+    "knownCareerUrl": "https://www.shipium.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Logistics software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "slalom",
+    "name": "Slalom",
+    "websiteUrl": "https://www.slalom.com",
+    "knownCareerUrl": "https://www.slalom.com/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Technology consulting and software delivery",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "snap",
+    "name": "Snap",
+    "websiteUrl": "https://www.snap.com",
+    "knownCareerUrl": "https://www.snap.com/jobs",
+    "headquarters": "Seattle area office",
+    "industry": "Consumer software and AR",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "sofi",
+    "name": "SoFi",
+    "websiteUrl": "https://www.sofi.com",
+    "knownCareerUrl": "https://www.sofi.com/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "Fintech software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "soundcommerce",
+    "name": "SoundCommerce",
+    "websiteUrl": "https://soundcommerce.com",
+    "knownCareerUrl": "https://soundcommerce.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Retail data platform",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "spice-ai",
+    "name": "Spice AI",
+    "websiteUrl": "https://spice.ai",
+    "knownCareerUrl": "https://spice.ai/careers",
+    "headquarters": "Seattle, WA",
+    "industry": "AI developer infrastructure",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "splunk",
+    "name": "Splunk",
+    "websiteUrl": "https://www.splunk.com",
+    "knownCareerUrl": "https://www.splunk.com/en_us/careers.html",
+    "headquarters": "Seattle area office",
+    "industry": "Observability and security software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "websiteUrl": "https://www.starbucks.com",
+    "knownCareerUrl": "https://www.starbucks.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Retail technology and ecommerce",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "statsig",
+    "name": "Statsig",
+    "websiteUrl": "https://www.statsig.com",
+    "knownCareerUrl": "https://www.statsig.com/careers",
+    "headquarters": "Bellevue, WA",
+    "industry": "Experimentation platform software",
+    "confidenceScore": 0.86
+  },
+  {
+    "id": "stoke-space",
+    "name": "Stoke Space",
+    "websiteUrl": "https://www.stokespace.com",
+    "knownCareerUrl": "https://www.stokespace.com/careers",
+    "headquarters": "Kent, WA",
+    "industry": "Aerospace software and systems",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "syndio",
+    "name": "Syndio",
+    "websiteUrl": "https://synd.io",
+    "knownCareerUrl": "https://synd.io/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Workplace analytics software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "tanium",
+    "name": "Tanium",
+    "websiteUrl": "https://www.tanium.com",
+    "knownCareerUrl": "https://www.tanium.com/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "Endpoint security software",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "terrapower",
+    "name": "TerraPower",
+    "websiteUrl": "https://www.terrapower.com",
+    "knownCareerUrl": "https://www.terrapower.com/careers/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Energy systems software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "textio",
+    "name": "Textio",
+    "websiteUrl": "https://textio.com",
+    "knownCareerUrl": "https://textio.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "AI writing and HR software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "truveta",
+    "name": "Truveta",
+    "websiteUrl": "https://www.truveta.com",
+    "knownCareerUrl": "https://www.truveta.com/careers/",
+    "headquarters": "Bellevue, WA",
+    "industry": "Healthcare data software",
+    "confidenceScore": 0.84
+  },
+  {
+    "id": "twilio",
+    "name": "Twilio",
+    "websiteUrl": "https://www.twilio.com",
+    "knownCareerUrl": "https://www.twilio.com/en-us/company/jobs",
+    "headquarters": "Seattle area office",
+    "industry": "Communication platform software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "uber",
+    "name": "Uber",
+    "websiteUrl": "https://www.uber.com",
+    "knownCareerUrl": "https://www.uber.com/us/en/careers/",
+    "headquarters": "Seattle area office",
+    "industry": "Mobility marketplace software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "unity",
+    "name": "Unity",
+    "websiteUrl": "https://unity.com",
+    "knownCareerUrl": "https://careers.unity.com/",
+    "headquarters": "Bellevue/Seattle area office",
+    "industry": "Game engine software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "uipath",
+    "name": "UiPath",
+    "websiteUrl": "https://www.uipath.com",
+    "knownCareerUrl": "https://www.uipath.com/careers",
+    "headquarters": "Bellevue/Seattle area office",
+    "industry": "Automation software",
+    "confidenceScore": 0.74
+  },
+  {
+    "id": "vouched",
+    "name": "Vouched",
+    "websiteUrl": "https://www.vouched.id",
+    "knownCareerUrl": "https://vouched.webflow.io/jobs",
+    "headquarters": "Seattle, WA",
+    "industry": "Identity verification software",
+    "confidenceScore": 0.76
+  },
+  {
+    "id": "watchguard",
+    "name": "WatchGuard",
+    "websiteUrl": "https://www.watchguard.com",
+    "knownCareerUrl": "https://www.watchguard.com/wgrd-careers",
+    "headquarters": "Seattle, WA",
+    "industry": "Cybersecurity software",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "whylabs",
+    "name": "WhyLabs",
+    "websiteUrl": "https://whylabs.ai",
+    "knownCareerUrl": "https://whylabs.ai/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "AI observability software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "wizards-of-the-coast",
+    "name": "Wizards of the Coast",
+    "websiteUrl": "https://company.wizards.com",
+    "knownCareerUrl": "https://company.wizards.com/en/careers",
+    "headquarters": "Renton, WA",
+    "industry": "Game and entertainment technology",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "wyze",
+    "name": "Wyze",
+    "websiteUrl": "https://www.wyze.com",
+    "knownCareerUrl": "https://www.wyze.com/pages/careers",
+    "headquarters": "Kirkland, WA",
+    "industry": "Consumer hardware and software",
+    "confidenceScore": 0.78
+  },
+  {
+    "id": "xealth",
+    "name": "Xealth",
+    "websiteUrl": "https://www.xealth.com",
+    "knownCareerUrl": "https://www.xealth.com/careers/",
+    "headquarters": "Seattle, WA",
+    "industry": "Healthcare platform software",
+    "confidenceScore": 0.8
+  },
+  {
+    "id": "zenoti",
+    "name": "Zenoti",
+    "websiteUrl": "https://www.zenoti.com",
+    "knownCareerUrl": "https://www.zenoti.com/careers",
+    "headquarters": "Bellevue, WA",
+    "industry": "Enterprise SaaS",
+    "confidenceScore": 0.82
+  },
+  {
+    "id": "zap-energy",
+    "name": "Zap Energy",
+    "websiteUrl": "https://www.zapenergy.com",
+    "knownCareerUrl": "https://www.zapenergy.com/careers",
+    "headquarters": "Everett, WA",
+    "industry": "Energy systems software",
+    "confidenceScore": 0.78
+  }
+]

@@ -1,0 +1,11 @@
+Seattle-based software engineer focused on backend and full-stack products.
+
+Experience
+- Built Python and Java services with REST APIs, SQL, Docker, AWS Lambda, and CI/CD pipelines.
+- Improved API latency by 32% by adding caching, query tuning, and production telemetry.
+- Created a React and TypeScript dashboard backed by PostgreSQL and automated tests.
+- Practiced data structures, algorithms, system design, and distributed systems through production projects and interview prep.
+
+Projects
+- Job match platform using Next.js, FastAPI, PostgreSQL, Redis, embeddings, and AWS deployment patterns.
+

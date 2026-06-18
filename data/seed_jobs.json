@@ -1,0 +1,2502 @@
+[
+  {
+    "id": "microsoft-software-development-engineer-1",
+    "company": "Microsoft",
+    "title": "Software Development Engineer Intern",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Microsoft%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "onsite",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "Kafka",
+      "Datadog",
+      "Flink",
+      "Feature Flags"
+    ]
+  },
+  {
+    "id": "amazon-backend-software-engineer-2",
+    "company": "Amazon",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Amazon%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "hybrid",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "DynamoDB",
+      "Prometheus",
+      "Pandas",
+      "A/B Testing"
+    ]
+  },
+  {
+    "id": "google-full-stack-engineer-3",
+    "company": "Google",
+    "title": "Full Stack Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Google%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "remote",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Lambda",
+      "Playwright",
+      "Kotlin",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "id": "meta-frontend-software-engineer-4",
+    "company": "Meta",
+    "title": "Frontend Software Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Meta%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "onsite",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Elasticsearch",
+      "Tailwind CSS",
+      "Swift",
+      "Kafka"
+    ]
+  },
+  {
+    "id": "apple-platform-engineer-5",
+    "company": "Apple",
+    "title": "Platform Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Apple%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "hybrid",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Snowflake",
+      "Prisma",
+      "OpenTelemetry",
+      "DynamoDB"
+    ]
+  },
+  {
+    "id": "salesforce-infrastructure-software-engineer-6",
+    "company": "Salesforce",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Salesforce%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "remote",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "Datadog",
+      "SQS",
+      "GitHub Actions",
+      "Lambda"
+    ]
+  },
+  {
+    "id": "snowflake-cloud-services-engineer-7",
+    "company": "Snowflake",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Snowflake%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "onsite",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Prometheus",
+      "Flink",
+      "Feature Flags",
+      "Elasticsearch"
+    ]
+  },
+  {
+    "id": "databricks-data-platform-engineer-8",
+    "company": "Databricks",
+    "title": "Data Platform Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Databricks%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "hybrid",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Playwright",
+      "Pandas",
+      "A/B Testing",
+      "Snowflake"
+    ]
+  },
+  {
+    "id": "stripe-product-software-engineer-9",
+    "company": "Stripe",
+    "title": "Product Software Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Stripe%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "remote",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "Tailwind CSS",
+      "Kotlin",
+      "Cost Optimization",
+      "Datadog"
+    ]
+  },
+  {
+    "id": "doordash-machine-learning-platform-engineer-10",
+    "company": "DoorDash",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=DoorDash%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "onsite",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Prisma",
+      "Swift",
+      "Kafka",
+      "Prometheus"
+    ]
+  },
+  {
+    "id": "uber-software-development-engineer-11",
+    "company": "Uber",
+    "title": "Software Development Engineer Intern",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Uber%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "hybrid",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "SQS",
+      "OpenTelemetry",
+      "DynamoDB",
+      "Playwright"
+    ]
+  },
+  {
+    "id": "expedia-backend-software-engineer-12",
+    "company": "Expedia",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Expedia%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "remote",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "Flink",
+      "GitHub Actions",
+      "Lambda",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "zillow-full-stack-engineer-13",
+    "company": "Zillow",
+    "title": "Full Stack Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Zillow%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "onsite",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Pandas",
+      "Feature Flags",
+      "Elasticsearch",
+      "Prisma"
+    ]
+  },
+  {
+    "id": "redfin-frontend-software-engineer-14",
+    "company": "Redfin",
+    "title": "Frontend Software Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Redfin%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "hybrid",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Kotlin",
+      "A/B Testing",
+      "Snowflake",
+      "SQS"
+    ]
+  },
+  {
+    "id": "f5-platform-engineer-15",
+    "company": "F5",
+    "title": "Platform Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=F5%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "remote",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Swift",
+      "Cost Optimization",
+      "Datadog",
+      "Flink"
+    ]
+  },
+  {
+    "id": "smartsheet-infrastructure-software-engineer-16",
+    "company": "Smartsheet",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Smartsheet%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "onsite",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "OpenTelemetry",
+      "Kafka",
+      "Prometheus",
+      "Pandas"
+    ]
+  },
+  {
+    "id": "qualtrics-cloud-services-engineer-17",
+    "company": "Qualtrics",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Qualtrics%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "hybrid",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "GitHub Actions",
+      "DynamoDB",
+      "Playwright",
+      "Kotlin"
+    ]
+  },
+  {
+    "id": "remitly-data-platform-engineer-18",
+    "company": "Remitly",
+    "title": "Data Platform Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Remitly%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "remote",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Feature Flags",
+      "Lambda",
+      "Tailwind CSS",
+      "Swift"
+    ]
+  },
+  {
+    "id": "convoy-labs-product-software-engineer-19",
+    "company": "Convoy Labs",
+    "title": "Product Software Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Convoy%20Labs%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "onsite",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "A/B Testing",
+      "Elasticsearch",
+      "Prisma",
+      "OpenTelemetry"
+    ]
+  },
+  {
+    "id": "outreach-machine-learning-platform-engineer-20",
+    "company": "Outreach",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Outreach%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "hybrid",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Cost Optimization",
+      "Snowflake",
+      "SQS",
+      "GitHub Actions"
+    ]
+  },
+  {
+    "id": "highspot-software-development-engineer-21",
+    "company": "Highspot",
+    "title": "Software Development Engineer Intern",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Highspot%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "remote",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "Kafka",
+      "Datadog",
+      "Flink",
+      "Feature Flags"
+    ]
+  },
+  {
+    "id": "tableau-backend-software-engineer-22",
+    "company": "Tableau",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Tableau%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "onsite",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "DynamoDB",
+      "Prometheus",
+      "Pandas",
+      "A/B Testing"
+    ]
+  },
+  {
+    "id": "mongodb-full-stack-engineer-23",
+    "company": "MongoDB",
+    "title": "Full Stack Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=MongoDB%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "hybrid",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Lambda",
+      "Playwright",
+      "Kotlin",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "id": "servicenow-frontend-software-engineer-24",
+    "company": "ServiceNow",
+    "title": "Frontend Software Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=ServiceNow%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "remote",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Elasticsearch",
+      "Tailwind CSS",
+      "Swift",
+      "Kafka"
+    ]
+  },
+  {
+    "id": "oracle-platform-engineer-25",
+    "company": "Oracle",
+    "title": "Platform Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Oracle%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "onsite",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Snowflake",
+      "Prisma",
+      "OpenTelemetry",
+      "DynamoDB"
+    ]
+  },
+  {
+    "id": "adobe-infrastructure-software-engineer-26",
+    "company": "Adobe",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Adobe%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "hybrid",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "Datadog",
+      "SQS",
+      "GitHub Actions",
+      "Lambda"
+    ]
+  },
+  {
+    "id": "nvidia-cloud-services-engineer-27",
+    "company": "Nvidia",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Nvidia%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "remote",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Prometheus",
+      "Flink",
+      "Feature Flags",
+      "Elasticsearch"
+    ]
+  },
+  {
+    "id": "palantir-data-platform-engineer-28",
+    "company": "Palantir",
+    "title": "Data Platform Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Palantir%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "onsite",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Playwright",
+      "Pandas",
+      "A/B Testing",
+      "Snowflake"
+    ]
+  },
+  {
+    "id": "robinhood-product-software-engineer-29",
+    "company": "Robinhood",
+    "title": "Product Software Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Robinhood%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "hybrid",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "Tailwind CSS",
+      "Kotlin",
+      "Cost Optimization",
+      "Datadog"
+    ]
+  },
+  {
+    "id": "block-machine-learning-platform-engineer-30",
+    "company": "Block",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Block%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "remote",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Prisma",
+      "Swift",
+      "Kafka",
+      "Prometheus"
+    ]
+  },
+  {
+    "id": "microsoft-software-development-engineer-31",
+    "company": "Microsoft",
+    "title": "Software Development Engineer Intern",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Microsoft%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "onsite",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "SQS",
+      "OpenTelemetry",
+      "DynamoDB",
+      "Playwright"
+    ]
+  },
+  {
+    "id": "amazon-backend-software-engineer-32",
+    "company": "Amazon",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Amazon%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "hybrid",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "Flink",
+      "GitHub Actions",
+      "Lambda",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "google-full-stack-engineer-33",
+    "company": "Google",
+    "title": "Full Stack Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Google%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "remote",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Pandas",
+      "Feature Flags",
+      "Elasticsearch",
+      "Prisma"
+    ]
+  },
+  {
+    "id": "meta-frontend-software-engineer-34",
+    "company": "Meta",
+    "title": "Frontend Software Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Meta%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "onsite",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Kotlin",
+      "A/B Testing",
+      "Snowflake",
+      "SQS"
+    ]
+  },
+  {
+    "id": "apple-platform-engineer-35",
+    "company": "Apple",
+    "title": "Platform Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Apple%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "hybrid",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Swift",
+      "Cost Optimization",
+      "Datadog",
+      "Flink"
+    ]
+  },
+  {
+    "id": "salesforce-infrastructure-software-engineer-36",
+    "company": "Salesforce",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Salesforce%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "remote",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "OpenTelemetry",
+      "Kafka",
+      "Prometheus",
+      "Pandas"
+    ]
+  },
+  {
+    "id": "snowflake-cloud-services-engineer-37",
+    "company": "Snowflake",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Snowflake%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "onsite",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "GitHub Actions",
+      "DynamoDB",
+      "Playwright",
+      "Kotlin"
+    ]
+  },
+  {
+    "id": "databricks-data-platform-engineer-38",
+    "company": "Databricks",
+    "title": "Data Platform Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Databricks%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "hybrid",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Feature Flags",
+      "Lambda",
+      "Tailwind CSS",
+      "Swift"
+    ]
+  },
+  {
+    "id": "stripe-product-software-engineer-39",
+    "company": "Stripe",
+    "title": "Product Software Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Stripe%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "remote",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "A/B Testing",
+      "Elasticsearch",
+      "Prisma",
+      "OpenTelemetry"
+    ]
+  },
+  {
+    "id": "doordash-machine-learning-platform-engineer-40",
+    "company": "DoorDash",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=DoorDash%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "onsite",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Cost Optimization",
+      "Snowflake",
+      "SQS",
+      "GitHub Actions"
+    ]
+  },
+  {
+    "id": "uber-software-development-engineer-41",
+    "company": "Uber",
+    "title": "Software Development Engineer Intern",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Uber%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "hybrid",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "Kafka",
+      "Datadog",
+      "Flink",
+      "Feature Flags"
+    ]
+  },
+  {
+    "id": "expedia-backend-software-engineer-42",
+    "company": "Expedia",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Expedia%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "remote",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "DynamoDB",
+      "Prometheus",
+      "Pandas",
+      "A/B Testing"
+    ]
+  },
+  {
+    "id": "zillow-full-stack-engineer-43",
+    "company": "Zillow",
+    "title": "Full Stack Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Zillow%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "onsite",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Lambda",
+      "Playwright",
+      "Kotlin",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "id": "redfin-frontend-software-engineer-44",
+    "company": "Redfin",
+    "title": "Frontend Software Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Redfin%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "hybrid",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Elasticsearch",
+      "Tailwind CSS",
+      "Swift",
+      "Kafka"
+    ]
+  },
+  {
+    "id": "f5-platform-engineer-45",
+    "company": "F5",
+    "title": "Platform Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=F5%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "remote",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Snowflake",
+      "Prisma",
+      "OpenTelemetry",
+      "DynamoDB"
+    ]
+  },
+  {
+    "id": "smartsheet-infrastructure-software-engineer-46",
+    "company": "Smartsheet",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Smartsheet%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "onsite",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "Datadog",
+      "SQS",
+      "GitHub Actions",
+      "Lambda"
+    ]
+  },
+  {
+    "id": "qualtrics-cloud-services-engineer-47",
+    "company": "Qualtrics",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Qualtrics%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "hybrid",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Prometheus",
+      "Flink",
+      "Feature Flags",
+      "Elasticsearch"
+    ]
+  },
+  {
+    "id": "remitly-data-platform-engineer-48",
+    "company": "Remitly",
+    "title": "Data Platform Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Remitly%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "remote",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Playwright",
+      "Pandas",
+      "A/B Testing",
+      "Snowflake"
+    ]
+  },
+  {
+    "id": "convoy-labs-product-software-engineer-49",
+    "company": "Convoy Labs",
+    "title": "Product Software Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Convoy%20Labs%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "onsite",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "Tailwind CSS",
+      "Kotlin",
+      "Cost Optimization",
+      "Datadog"
+    ]
+  },
+  {
+    "id": "outreach-machine-learning-platform-engineer-50",
+    "company": "Outreach",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Outreach%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "hybrid",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Prisma",
+      "Swift",
+      "Kafka",
+      "Prometheus"
+    ]
+  },
+  {
+    "id": "highspot-software-development-engineer-51",
+    "company": "Highspot",
+    "title": "Software Development Engineer Intern",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Highspot%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "remote",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "SQS",
+      "OpenTelemetry",
+      "DynamoDB",
+      "Playwright"
+    ]
+  },
+  {
+    "id": "tableau-backend-software-engineer-52",
+    "company": "Tableau",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Tableau%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "onsite",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "Flink",
+      "GitHub Actions",
+      "Lambda",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "mongodb-full-stack-engineer-53",
+    "company": "MongoDB",
+    "title": "Full Stack Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=MongoDB%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "hybrid",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Pandas",
+      "Feature Flags",
+      "Elasticsearch",
+      "Prisma"
+    ]
+  },
+  {
+    "id": "servicenow-frontend-software-engineer-54",
+    "company": "ServiceNow",
+    "title": "Frontend Software Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=ServiceNow%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "remote",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Kotlin",
+      "A/B Testing",
+      "Snowflake",
+      "SQS"
+    ]
+  },
+  {
+    "id": "oracle-platform-engineer-55",
+    "company": "Oracle",
+    "title": "Platform Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Oracle%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "onsite",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Swift",
+      "Cost Optimization",
+      "Datadog",
+      "Flink"
+    ]
+  },
+  {
+    "id": "adobe-infrastructure-software-engineer-56",
+    "company": "Adobe",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Adobe%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "hybrid",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "OpenTelemetry",
+      "Kafka",
+      "Prometheus",
+      "Pandas"
+    ]
+  },
+  {
+    "id": "nvidia-cloud-services-engineer-57",
+    "company": "Nvidia",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Nvidia%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "remote",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "GitHub Actions",
+      "DynamoDB",
+      "Playwright",
+      "Kotlin"
+    ]
+  },
+  {
+    "id": "palantir-data-platform-engineer-58",
+    "company": "Palantir",
+    "title": "Data Platform Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Palantir%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "onsite",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Feature Flags",
+      "Lambda",
+      "Tailwind CSS",
+      "Swift"
+    ]
+  },
+  {
+    "id": "robinhood-product-software-engineer-59",
+    "company": "Robinhood",
+    "title": "Product Software Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Robinhood%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "hybrid",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "A/B Testing",
+      "Elasticsearch",
+      "Prisma",
+      "OpenTelemetry"
+    ]
+  },
+  {
+    "id": "block-machine-learning-platform-engineer-60",
+    "company": "Block",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Block%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "remote",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Cost Optimization",
+      "Snowflake",
+      "SQS",
+      "GitHub Actions"
+    ]
+  },
+  {
+    "id": "microsoft-software-development-engineer-61",
+    "company": "Microsoft",
+    "title": "Software Development Engineer Intern",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Microsoft%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "onsite",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "Kafka",
+      "Datadog",
+      "Flink",
+      "Feature Flags"
+    ]
+  },
+  {
+    "id": "amazon-backend-software-engineer-62",
+    "company": "Amazon",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Amazon%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "hybrid",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "DynamoDB",
+      "Prometheus",
+      "Pandas",
+      "A/B Testing"
+    ]
+  },
+  {
+    "id": "google-full-stack-engineer-63",
+    "company": "Google",
+    "title": "Full Stack Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Google%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "remote",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Lambda",
+      "Playwright",
+      "Kotlin",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "id": "meta-frontend-software-engineer-64",
+    "company": "Meta",
+    "title": "Frontend Software Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Meta%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "onsite",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Elasticsearch",
+      "Tailwind CSS",
+      "Swift",
+      "Kafka"
+    ]
+  },
+  {
+    "id": "apple-platform-engineer-65",
+    "company": "Apple",
+    "title": "Platform Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Apple%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "hybrid",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Snowflake",
+      "Prisma",
+      "OpenTelemetry",
+      "DynamoDB"
+    ]
+  },
+  {
+    "id": "salesforce-infrastructure-software-engineer-66",
+    "company": "Salesforce",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Salesforce%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "remote",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "Datadog",
+      "SQS",
+      "GitHub Actions",
+      "Lambda"
+    ]
+  },
+  {
+    "id": "snowflake-cloud-services-engineer-67",
+    "company": "Snowflake",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Snowflake%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "onsite",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Prometheus",
+      "Flink",
+      "Feature Flags",
+      "Elasticsearch"
+    ]
+  },
+  {
+    "id": "databricks-data-platform-engineer-68",
+    "company": "Databricks",
+    "title": "Data Platform Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Databricks%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "hybrid",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Playwright",
+      "Pandas",
+      "A/B Testing",
+      "Snowflake"
+    ]
+  },
+  {
+    "id": "stripe-product-software-engineer-69",
+    "company": "Stripe",
+    "title": "Product Software Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Stripe%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "remote",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "Tailwind CSS",
+      "Kotlin",
+      "Cost Optimization",
+      "Datadog"
+    ]
+  },
+  {
+    "id": "doordash-machine-learning-platform-engineer-70",
+    "company": "DoorDash",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=DoorDash%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "onsite",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Prisma",
+      "Swift",
+      "Kafka",
+      "Prometheus"
+    ]
+  },
+  {
+    "id": "uber-software-development-engineer-71",
+    "company": "Uber",
+    "title": "Software Development Engineer Intern",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Uber%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "hybrid",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "SQS",
+      "OpenTelemetry",
+      "DynamoDB",
+      "Playwright"
+    ]
+  },
+  {
+    "id": "expedia-backend-software-engineer-72",
+    "company": "Expedia",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Expedia%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "remote",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "Flink",
+      "GitHub Actions",
+      "Lambda",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "zillow-full-stack-engineer-73",
+    "company": "Zillow",
+    "title": "Full Stack Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Zillow%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "onsite",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Pandas",
+      "Feature Flags",
+      "Elasticsearch",
+      "Prisma"
+    ]
+  },
+  {
+    "id": "redfin-frontend-software-engineer-74",
+    "company": "Redfin",
+    "title": "Frontend Software Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Redfin%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "hybrid",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Kotlin",
+      "A/B Testing",
+      "Snowflake",
+      "SQS"
+    ]
+  },
+  {
+    "id": "f5-platform-engineer-75",
+    "company": "F5",
+    "title": "Platform Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=F5%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "remote",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Swift",
+      "Cost Optimization",
+      "Datadog",
+      "Flink"
+    ]
+  },
+  {
+    "id": "smartsheet-infrastructure-software-engineer-76",
+    "company": "Smartsheet",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Smartsheet%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "onsite",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "OpenTelemetry",
+      "Kafka",
+      "Prometheus",
+      "Pandas"
+    ]
+  },
+  {
+    "id": "qualtrics-cloud-services-engineer-77",
+    "company": "Qualtrics",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Qualtrics%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "hybrid",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "GitHub Actions",
+      "DynamoDB",
+      "Playwright",
+      "Kotlin"
+    ]
+  },
+  {
+    "id": "remitly-data-platform-engineer-78",
+    "company": "Remitly",
+    "title": "Data Platform Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Remitly%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "remote",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Feature Flags",
+      "Lambda",
+      "Tailwind CSS",
+      "Swift"
+    ]
+  },
+  {
+    "id": "convoy-labs-product-software-engineer-79",
+    "company": "Convoy Labs",
+    "title": "Product Software Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Convoy%20Labs%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "onsite",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "A/B Testing",
+      "Elasticsearch",
+      "Prisma",
+      "OpenTelemetry"
+    ]
+  },
+  {
+    "id": "outreach-machine-learning-platform-engineer-80",
+    "company": "Outreach",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Outreach%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "hybrid",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Cost Optimization",
+      "Snowflake",
+      "SQS",
+      "GitHub Actions"
+    ]
+  },
+  {
+    "id": "highspot-software-development-engineer-81",
+    "company": "Highspot",
+    "title": "Software Development Engineer Intern",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Highspot%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "remote",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "Kafka",
+      "Datadog",
+      "Flink",
+      "Feature Flags"
+    ]
+  },
+  {
+    "id": "tableau-backend-software-engineer-82",
+    "company": "Tableau",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Tableau%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "onsite",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "DynamoDB",
+      "Prometheus",
+      "Pandas",
+      "A/B Testing"
+    ]
+  },
+  {
+    "id": "mongodb-full-stack-engineer-83",
+    "company": "MongoDB",
+    "title": "Full Stack Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=MongoDB%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "hybrid",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Lambda",
+      "Playwright",
+      "Kotlin",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "id": "servicenow-frontend-software-engineer-84",
+    "company": "ServiceNow",
+    "title": "Frontend Software Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=ServiceNow%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "remote",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Elasticsearch",
+      "Tailwind CSS",
+      "Swift",
+      "Kafka"
+    ]
+  },
+  {
+    "id": "oracle-platform-engineer-85",
+    "company": "Oracle",
+    "title": "Platform Engineer",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Oracle%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "onsite",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Snowflake",
+      "Prisma",
+      "OpenTelemetry",
+      "DynamoDB"
+    ]
+  },
+  {
+    "id": "adobe-infrastructure-software-engineer-86",
+    "company": "Adobe",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Adobe%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "hybrid",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "Datadog",
+      "SQS",
+      "GitHub Actions",
+      "Lambda"
+    ]
+  },
+  {
+    "id": "nvidia-cloud-services-engineer-87",
+    "company": "Nvidia",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Nvidia%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "remote",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Prometheus",
+      "Flink",
+      "Feature Flags",
+      "Elasticsearch"
+    ]
+  },
+  {
+    "id": "palantir-data-platform-engineer-88",
+    "company": "Palantir",
+    "title": "Data Platform Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Palantir%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "onsite",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Playwright",
+      "Pandas",
+      "A/B Testing",
+      "Snowflake"
+    ]
+  },
+  {
+    "id": "robinhood-product-software-engineer-89",
+    "company": "Robinhood",
+    "title": "Product Software Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Robinhood%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "hybrid",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "Tailwind CSS",
+      "Kotlin",
+      "Cost Optimization",
+      "Datadog"
+    ]
+  },
+  {
+    "id": "block-machine-learning-platform-engineer-90",
+    "company": "Block",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Block%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "remote",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Prisma",
+      "Swift",
+      "Kafka",
+      "Prometheus"
+    ]
+  },
+  {
+    "id": "microsoft-software-development-engineer-91",
+    "company": "Microsoft",
+    "title": "Software Development Engineer Intern",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Microsoft%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "onsite",
+    "description": "Work on software development engineer projects for customer-facing and internal platforms. This role emphasizes Java, Spring Boot, REST API, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Distributed Systems",
+      "AWS"
+    ],
+    "niceToHaveSkills": [
+      "SQS",
+      "OpenTelemetry",
+      "DynamoDB",
+      "Playwright"
+    ]
+  },
+  {
+    "id": "amazon-backend-software-engineer-92",
+    "company": "Amazon",
+    "title": "Backend Software Engineer, New Grad",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Amazon%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "hybrid",
+    "description": "Work on backend software engineer projects for customer-facing and internal platforms. This role emphasizes Python, FastAPI, PostgreSQL, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "System Design"
+    ],
+    "niceToHaveSkills": [
+      "Flink",
+      "GitHub Actions",
+      "Lambda",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "google-full-stack-engineer-93",
+    "company": "Google",
+    "title": "Full Stack Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Google%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "remote",
+    "description": "Work on full stack engineer projects for customer-facing and internal platforms. This role emphasizes TypeScript, React, Next.js, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "Pandas",
+      "Feature Flags",
+      "Elasticsearch",
+      "Prisma"
+    ]
+  },
+  {
+    "id": "meta-frontend-software-engineer-94",
+    "company": "Meta",
+    "title": "Frontend Software Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Meta%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "onsite",
+    "description": "Work on frontend software engineer projects for customer-facing and internal platforms. This role emphasizes Go, Kubernetes, gRPC, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Go",
+      "Kubernetes",
+      "gRPC",
+      "Linux",
+      "Observability",
+      "Terraform"
+    ],
+    "niceToHaveSkills": [
+      "Kotlin",
+      "A/B Testing",
+      "Snowflake",
+      "SQS"
+    ]
+  },
+  {
+    "id": "apple-platform-engineer-95",
+    "company": "Apple",
+    "title": "Platform Engineer",
+    "location": "Seattle, WA / Remote US",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Apple%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "hybrid",
+    "description": "Work on platform engineer projects for customer-facing and internal platforms. This role emphasizes C#, .NET, Azure, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Microservices",
+      "CI/CD",
+      "Event Streaming"
+    ],
+    "niceToHaveSkills": [
+      "Swift",
+      "Cost Optimization",
+      "Datadog",
+      "Flink"
+    ]
+  },
+  {
+    "id": "salesforce-infrastructure-software-engineer-96",
+    "company": "Salesforce",
+    "title": "Infrastructure Software Engineer Intern",
+    "location": "Bellevue, WA / Hybrid",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Salesforce%20careers%20software%20engineer%20Seattle",
+    "level": "intern",
+    "workMode": "remote",
+    "description": "Work on infrastructure software engineer projects for customer-facing and internal platforms. This role emphasizes Python, Spark, Airflow, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Data Modeling",
+      "ETL",
+      "Databases"
+    ],
+    "niceToHaveSkills": [
+      "OpenTelemetry",
+      "Kafka",
+      "Prometheus",
+      "Pandas"
+    ]
+  },
+  {
+    "id": "snowflake-cloud-services-engineer-97",
+    "company": "Snowflake",
+    "title": "Cloud Services Engineer, New Grad",
+    "location": "Seattle, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Snowflake%20careers%20software%20engineer%20Seattle",
+    "level": "new-grad",
+    "workMode": "onsite",
+    "description": "Work on cloud services engineer projects for customer-facing and internal platforms. This role emphasizes JavaScript, Accessibility, Design Systems, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "JavaScript",
+      "Accessibility",
+      "Design Systems",
+      "React",
+      "Performance",
+      "Testing"
+    ],
+    "niceToHaveSkills": [
+      "GitHub Actions",
+      "DynamoDB",
+      "Playwright",
+      "Kotlin"
+    ]
+  },
+  {
+    "id": "databricks-data-platform-engineer-98",
+    "company": "Databricks",
+    "title": "Data Platform Engineer",
+    "location": "Bellevue, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Databricks%20careers%20software%20engineer%20Seattle",
+    "level": "entry",
+    "workMode": "hybrid",
+    "description": "Work on data platform engineer projects for customer-facing and internal platforms. This role emphasizes Rust, C++, Networking, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Rust",
+      "C++",
+      "Networking",
+      "Concurrency",
+      "Low-Level Systems",
+      "Linux"
+    ],
+    "niceToHaveSkills": [
+      "Feature Flags",
+      "Lambda",
+      "Tailwind CSS",
+      "Swift"
+    ]
+  },
+  {
+    "id": "stripe-product-software-engineer-99",
+    "company": "Stripe",
+    "title": "Product Software Engineer",
+    "location": "Redmond, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=Stripe%20careers%20software%20engineer%20Seattle",
+    "level": "mid",
+    "workMode": "remote",
+    "description": "Work on product software engineer projects for customer-facing and internal platforms. This role emphasizes Machine Learning, Python, Feature Stores, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Machine Learning",
+      "Python",
+      "Feature Stores",
+      "Model Serving",
+      "Kubernetes",
+      "MLOps"
+    ],
+    "niceToHaveSkills": [
+      "A/B Testing",
+      "Elasticsearch",
+      "Prisma",
+      "OpenTelemetry"
+    ]
+  },
+  {
+    "id": "doordash-machine-learning-platform-engineer-100",
+    "company": "DoorDash",
+    "title": "Machine Learning Platform Engineer",
+    "location": "Kirkland, WA",
+    "source": "local-db",
+    "sourceUrl": "https://www.google.com/search?q=DoorDash%20careers%20software%20engineer%20Seattle",
+    "level": "senior",
+    "workMode": "onsite",
+    "description": "Work on machine learning platform engineer projects for customer-facing and internal platforms. This role emphasizes Security, IAM, Cloud, production ownership, clear code reviews, and practical collaboration with product, design, and operations teams.",
+    "requiredSkills": [
+      "Security",
+      "IAM",
+      "Cloud",
+      "Threat Modeling",
+      "APIs",
+      "Automation"
+    ],
+    "niceToHaveSkills": [
+      "Cost Optimization",
+      "Snowflake",
+      "SQS",
+      "GitHub Actions"
+    ]
+  }
+]
