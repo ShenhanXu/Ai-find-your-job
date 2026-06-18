@@ -122,7 +122,7 @@ The intended production path is:
 Set these values in `.env`:
 
 ```bash
-OPENAI_API_KEY=sk-...
+OPENAI_API_KEY=your_openai_api_key_here
 OPENAI_MODEL=gpt-5.4-mini
 ```
 
