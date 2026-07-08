@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: apps/api/requirements.txt
+      - name: Install dependencies
+        working-directory: apps/api
+        run: pip install -r requirements.txt pytest
+      - name: Run API tests (demo mode, no external services)
+        working-directory: apps/api
+        run: PYTHONPATH=. pytest tests/ -q
+
+  typecheck-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - name: Install dependencies
+        working-directory: apps/web
+        run: npm ci
+      - name: Type-check frontend
+        working-directory: apps/web
+        run: npx tsc --noEmit
