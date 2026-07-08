@@ -9,7 +9,11 @@ A local-first job board prototype for browsing Seattle-area software engineering
 - Filter by Seattle-area location.
 - Filter for all roles, new grad / entry roles, or internships.
 - Open a dedicated job detail page.
-- Ask an AI job copilot question that checks Redis cache, retrieves relevant jobs with pgvector, and builds a RAG prompt.
+- Ask an AI job copilot question that retrieves relevant jobs with pgvector and builds a RAG prompt.
+- Route chat requests through a hybrid intent router that selects RAG, tool workflows, clarifying questions, or unsupported fallbacks.
+- Stream chat answers into a single AI bubble as the LLM generates text.
+- Render generative UI workflow blocks from copilot tool outputs: comparison cards, skill-gap matrix, resume checklist, and actions.
+- Expose job search, job detail lookup, and application action preparation through an MCP-compatible stdio server.
 - Use `data/seed_jobs.json` only as seed input for PostgreSQL.
 
 ## Tech Stack
@@ -20,7 +24,8 @@ A local-first job board prototype for browsing Seattle-area software engineering
 - RAG retrieval: PostgreSQL + pgvector
 - Embeddings: Jina embeddings via `JINA_API_KEY`
 - LLM responses: DeepSeek chat completions via `DEEPSEEK_API_KEY`
-- Semantic cache: Redis
+- Cache: disabled in the chat path for answer correctness
+- AI tool layer: LLM/rule hybrid intent router + typed copilot workflow tools + MCP stdio server
 - Prompt templates: versioned `job_chat_rag_v1`
 - Backend seed input: `data/seed_jobs.json`
 
@@ -54,7 +59,6 @@ Run the API:
 ```bash
 cd apps/api
 DATABASE_URL=postgresql://jobmatch:jobmatch@localhost:5432/jobmatch \
-REDIS_URL=redis://localhost:6379/0 \
 REQUIRE_DATABASE=true \
 EMBEDDING_PROVIDER=jina \
 python -m uvicorn app.main:app --reload --port 8000
@@ -76,6 +80,21 @@ EMBEDDING_PROVIDER=jina \
 python -m app.backfill_embeddings
 ```
 
+Run the MCP server for local AI-agent integrations:
+
+```bash
+cd apps/api
+python -m app.mcp_server
+```
+
+The MCP server supports:
+
+```text
+search_jobs
+get_job_details
+prepare_application_action
+```
+
 ## Notes
 
-The AI copilot retrieves a small, relevant job context first, then asks the LLM only when needed. In real mode, missing embeddings, Redis, or pgvector are reported clearly instead of silently falling back to fake local retrieval.
+The AI copilot retrieves a small, relevant job context first, then asks the LLM only when needed. Chat response caching is currently disabled so different questions never reuse stale answers. In real mode, missing embeddings or pgvector are reported clearly instead of silently falling back to fake local retrieval.

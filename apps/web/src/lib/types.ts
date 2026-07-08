@@ -69,6 +69,29 @@ export type MatchResult = {
 export type ResumeExtractResult = {
   filename: string;
   content: string;
+  resume_id?: string | null;
+  saved?: boolean;
+};
+
+export type User = {
+  id: string;
+  email: string;
+  name: string;
+};
+
+export type AuthResponse = {
+  token: string;
+  user: User;
+};
+
+export type SavedResume = {
+  id: string;
+  title: string;
+  filename: string;
+  content: string;
+  active: boolean;
+  created_at: string;
+  updated_at: string;
 };
 
 export type ChatRetrievedJob = {
@@ -82,6 +105,22 @@ export type ChatRetrievedJob = {
   reason: string;
 };
 
+export type ChatHistoryMessage = {
+  role: "assistant" | "user";
+  content: string;
+};
+
+export type IntentRoute = {
+  intent: string;
+  confidence: number;
+  needs_retrieval: boolean;
+  needs_action: boolean;
+  entities: Record<string, unknown>;
+  missing_fields: string[];
+  reason: string;
+  source: string;
+};
+
 export type ChatResponse = {
   answer: string;
   cache_status: string;
@@ -90,7 +129,59 @@ export type ChatResponse = {
   llm_used: boolean;
   prompt_template: string;
   retrieved_jobs: ChatRetrievedJob[];
+  intent_route?: IntentRoute | null;
+  workflow?: CopilotWorkflow | null;
   warnings: string[];
+};
+
+export type CopilotToolCall = {
+  name: string;
+  title: string;
+  status: string;
+  summary: string;
+};
+
+export type WorkflowJobCard = {
+  job_id: string;
+  company: string;
+  title: string;
+  location: string;
+  level: string;
+  work_mode: string;
+  score: number;
+  fit_summary: string;
+  matched_skills: string[];
+  missing_skills: string[];
+};
+
+export type SkillMatrixRow = {
+  skill: string;
+  status: string;
+  evidence: string;
+  jobs: string[];
+};
+
+export type ResumeChecklistItem = {
+  title: string;
+  priority: string;
+  detail: string;
+  related_skills: string[];
+};
+
+export type WorkflowAction = {
+  label: string;
+  intent: string;
+  job_id?: string | null;
+  payload: Record<string, string>;
+};
+
+export type CopilotWorkflow = {
+  title: string;
+  tool_calls: CopilotToolCall[];
+  job_cards: WorkflowJobCard[];
+  skill_matrix: SkillMatrixRow[];
+  resume_checklist: ResumeChecklistItem[];
+  actions: WorkflowAction[];
 };
 
 export type ApplicationStage = "saved" | "applied" | "oa" | "interview" | "rejected" | "offer";

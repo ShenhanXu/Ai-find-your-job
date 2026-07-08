@@ -3,10 +3,46 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
 CREATE TABLE IF NOT EXISTS resumes (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID,
   title TEXT NOT NULL,
+  filename TEXT NOT NULL DEFAULT '',
   raw_text TEXT NOT NULL,
+  active BOOLEAN NOT NULL DEFAULT true,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+CREATE TABLE IF NOT EXISTS users (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT UNIQUE NOT NULL,
+  name TEXT NOT NULL DEFAULT '',
+  password_hash TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+ALTER TABLE resumes ADD COLUMN IF NOT EXISTS user_id UUID;
+ALTER TABLE resumes ADD COLUMN IF NOT EXISTS filename TEXT NOT NULL DEFAULT '';
+ALTER TABLE resumes ADD COLUMN IF NOT EXISTS active BOOLEAN NOT NULL DEFAULT true;
+ALTER TABLE resumes ADD COLUMN IF NOT EXISTS updated_at TIMESTAMPTZ NOT NULL DEFAULT now();
+
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_constraint
+    WHERE conname = 'resumes_user_id_fkey'
+  ) THEN
+    ALTER TABLE resumes
+      ADD CONSTRAINT resumes_user_id_fkey
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;
+  END IF;
+END $$;
+
+CREATE INDEX IF NOT EXISTS resumes_user_id_idx ON resumes(user_id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS resumes_one_active_per_user_idx
+  ON resumes(user_id)
+  WHERE active AND user_id IS NOT NULL;
 
 CREATE TABLE IF NOT EXISTS job_postings (
   id TEXT PRIMARY KEY,

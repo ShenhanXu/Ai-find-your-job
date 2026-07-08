@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Optional
+from typing import Any, Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -116,6 +116,35 @@ class ResumeInput(BaseModel):
 class ResumeExtractResult(BaseModel):
     filename: str
     content: str
+    resume_id: str | None = None
+    saved: bool = False
+
+
+class UserPublic(BaseModel):
+    id: str
+    email: str
+    name: str
+
+
+class AuthRequest(BaseModel):
+    email: str = Field(min_length=3)
+    password: str = Field(min_length=8)
+    name: str = ""
+
+
+class AuthResponse(BaseModel):
+    token: str
+    user: UserPublic
+
+
+class SavedResume(BaseModel):
+    id: str
+    title: str
+    filename: str
+    content: str
+    active: bool
+    created_at: str
+    updated_at: str
 
 
 class MatchBreakdown(BaseModel):
@@ -155,6 +184,7 @@ class ChatRequest(BaseModel):
     question: str = Field(min_length=1)
     resume_context: str = ""
     conversation_id: str = "default"
+    messages: list[ChatMessage] = Field(default_factory=list)
     job_ids: list[str] | None = None
     top_k: int = Field(default=5, ge=1, le=10)
     use_llm: bool = True
@@ -171,6 +201,109 @@ class ChatRetrievedJob(BaseModel):
     reason: str
 
 
+class CopilotToolCall(BaseModel):
+    name: str
+    title: str
+    status: str = "completed"
+    summary: str = ""
+
+
+class WorkflowJobCard(BaseModel):
+    job_id: str
+    company: str
+    title: str
+    location: str
+    level: str
+    work_mode: str
+    score: int
+    fit_summary: str
+    matched_skills: list[str] = Field(default_factory=list)
+    missing_skills: list[str] = Field(default_factory=list)
+
+
+class SkillMatrixRow(BaseModel):
+    skill: str
+    status: str
+    evidence: str
+    jobs: list[str] = Field(default_factory=list)
+
+
+class ResumeChecklistItem(BaseModel):
+    title: str
+    priority: str
+    detail: str
+    related_skills: list[str] = Field(default_factory=list)
+
+
+class WorkflowAction(BaseModel):
+    label: str
+    intent: str
+    job_id: str | None = None
+    payload: dict[str, str] = Field(default_factory=dict)
+
+
+class CopilotWorkflow(BaseModel):
+    title: str = "Generated workflow"
+    tool_calls: list[CopilotToolCall] = Field(default_factory=list)
+    job_cards: list[WorkflowJobCard] = Field(default_factory=list)
+    skill_matrix: list[SkillMatrixRow] = Field(default_factory=list)
+    resume_checklist: list[ResumeChecklistItem] = Field(default_factory=list)
+    actions: list[WorkflowAction] = Field(default_factory=list)
+
+
+class IntentRoute(BaseModel):
+    intent: Literal[
+        "job_search",
+        "job_detail_lookup",
+        "job_compare",
+        "resume_fit_analysis",
+        "resume_tailoring",
+        "skill_gap_analysis",
+        "application_action",
+        "application_status_query",
+        "platform_help",
+        "small_talk",
+        "off_topic",
+        "nonsense",
+        "clarification_needed",
+        "unsupported",
+        "router_unavailable",
+    ]
+    confidence: float = Field(ge=0, le=1)
+    needs_retrieval: bool
+    needs_action: bool
+    entities: dict[str, Any] = Field(default_factory=dict)
+    missing_fields: list[str] = Field(default_factory=list)
+    reason: str = ""
+    source: str = "rules"
+
+
+class WorkflowTraceStep(BaseModel):
+    id: str
+    name: str
+    status: str
+    duration_ms: float
+    started_at: str
+    ended_at: str
+    attributes: dict[str, Any] = Field(default_factory=dict)
+    error: str | None = None
+
+
+class WorkflowTrace(BaseModel):
+    id: str
+    run_id: str = ""
+    level: str = "internal"
+    duration_ms: float
+    started_at: str
+    ended_at: str
+    steps: list[WorkflowTraceStep] = Field(default_factory=list)
+
+
+class MatchWorkflowTraceResponse(BaseModel):
+    results: list[MatchResult]
+    workflow_trace: WorkflowTrace
+
+
 class ChatResponse(BaseModel):
     answer: str
     cache_status: str
@@ -179,6 +312,9 @@ class ChatResponse(BaseModel):
     llm_used: bool
     prompt_template: str
     retrieved_jobs: list[ChatRetrievedJob] = Field(default_factory=list)
+    intent_route: IntentRoute | None = None
+    workflow: CopilotWorkflow | None = None
+    workflow_trace: WorkflowTrace | None = None
     warnings: list[str] = Field(default_factory=list)
 
 

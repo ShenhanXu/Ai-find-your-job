@@ -667,10 +667,100 @@ textarea {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .compactStatus {
   min-height: 34px;
+}
+
+.authForm {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.authForm input {
+  width: 150px;
+  height: 34px;
+  min-width: 0;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.authForm button,
+.accountSummary button {
+  min-height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--teal);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.authForm button:disabled {
+  opacity: 0.68;
+}
+
+.authForm .authSwitch,
+.accountSummary button {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--teal-dark);
+}
+
+.accountSummary {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 6px 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.accountSummary div {
+  display: grid;
+  gap: 1px;
+}
+
+.accountSummary strong {
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.accountSummary span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.authNotice {
+  margin: -6px 0 12px;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f2f7f4;
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.authNotice.error {
+  border-color: rgba(184, 58, 75, 0.32);
+  background: rgba(184, 58, 75, 0.08);
+  color: var(--rose);
 }
 
 .feedHero {
@@ -1312,10 +1402,332 @@ textarea {
 }
 
 .chatAnswer {
-  white-space: pre-wrap;
   color: inherit;
   font-size: 14px;
   line-height: 1.45;
+  overflow-x: auto;
+}
+
+.chatAnswer strong {
+  color: inherit;
+  font-weight: 900;
+}
+
+.chatAnswer > *:first-child {
+  margin-top: 0;
+}
+
+.chatAnswer > *:last-child {
+  margin-bottom: 0;
+}
+
+.chatAnswer p,
+.chatAnswer ul,
+.chatAnswer ol,
+.chatAnswer table,
+.chatAnswer blockquote,
+.chatAnswer pre {
+  margin: 0 0 10px;
+}
+
+.chatAnswer h1,
+.chatAnswer h2,
+.chatAnswer h3,
+.chatAnswer h4 {
+  margin: 14px 0 8px;
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 900;
+}
+
+.chatAnswer ul,
+.chatAnswer ol {
+  padding-left: 20px;
+}
+
+.chatAnswer li + li {
+  margin-top: 4px;
+}
+
+.chatAnswer table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.chatAnswer th,
+.chatAnswer td {
+  padding: 8px 9px;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.chatAnswer th {
+  background: #edf4ef;
+  color: var(--teal-dark);
+  font-weight: 900;
+}
+
+.chatAnswer td {
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.chatBubble.user .chatAnswer th {
+  background: rgba(255, 255, 255, 0.16);
+  color: inherit;
+}
+
+.chatBubble.user .chatAnswer th,
+.chatBubble.user .chatAnswer td {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chatAnswer code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: rgba(15, 23, 42, 0.08);
+  font-size: 0.92em;
+}
+
+.chatBubble.user .chatAnswer code {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.chatAnswer pre {
+  overflow-x: auto;
+  padding: 10px;
+  border-radius: 8px;
+  background: #eef3ef;
+}
+
+.chatAnswer pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.generativeWorkflow {
+  display: grid;
+  gap: 9px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbf6;
+}
+
+.workflowHeader,
+.workflowHeader span,
+.toolTrace,
+.toolTrace span,
+.workflowActions,
+.workflowActions a,
+.workflowActions button {
+  display: flex;
+  align-items: center;
+}
+
+.workflowHeader {
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.workflowHeader span {
+  gap: 6px;
+  color: var(--teal-dark);
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.workflowHeader strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.toolTrace {
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.toolTrace span {
+  min-height: 24px;
+  gap: 5px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: #e7f4ed;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.workflowCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.workflowJobCard {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.workflowJobTop {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px;
+  gap: 8px;
+  align-items: start;
+}
+
+.workflowJobTop div {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.workflowJobTop span,
+.workflowJobTop em,
+.matrixRow em,
+.workflowChecklist em {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 850;
+}
+
+.workflowJobTop strong {
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.22;
+}
+
+.workflowJobTop b {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--panel-2);
+  color: var(--teal-dark);
+  font-size: 14px;
+}
+
+.workflowJobCard p,
+.matrixRow p,
+.workflowChecklist p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.workflowChips .chip {
+  min-height: 22px;
+  margin: 0 4px 4px 0;
+  font-size: 11px;
+}
+
+.skillMatrix,
+.workflowChecklist {
+  display: grid;
+  gap: 7px;
+}
+
+.matrixRow {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.8fr) 82px minmax(0, 1.35fr);
+  gap: 7px;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.matrixRow strong {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+
+.matrixRow em {
+  grid-column: 3 / 4;
+}
+
+.matrixStatus {
+  min-height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #eef2f6;
+  color: #516073;
+  font-size: 10px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.matrixStatus.matched {
+  background: #e2f4e5;
+  color: var(--green);
+}
+
+.matrixStatus.missing {
+  background: #ffe8ef;
+  color: var(--rose);
+}
+
+.workflowChecklist article {
+  display: grid;
+  gap: 4px;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.workflowChecklist article span {
+  width: max-content;
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #fff4dd;
+  color: var(--amber);
+  font-size: 10px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.workflowChecklist strong {
+  font-size: 12px;
+}
+
+.workflowActions {
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.workflowActions a,
+.workflowActions button {
+  min-height: 30px;
+  gap: 6px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .retrievedJobs {
@@ -1437,6 +1849,17 @@ textarea {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .workflowCards,
+  .matrixRow {
+    grid-template-columns: 1fr;
+  }
+
+  .matrixRow em {
+    grid-column: auto;
   }
 }
 
@@ -1614,6 +2037,17 @@ textarea {
   .resumeMatchStatus {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .topbarActions,
+  .authForm,
+  .accountSummary {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .authForm input {
+    width: min(100%, 210px);
   }
 
   .feedControls,

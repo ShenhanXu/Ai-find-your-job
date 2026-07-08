@@ -1,18 +1,45 @@
+import logging
 import os
+from typing import Any
 from uuid import uuid4
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import Depends, FastAPI, File, Header, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
+import psycopg
 
+from .auth import create_access_token, hash_password, verify_access_token, verify_password
 from .company_discovery import run_company_discovery
-from .database import database_health, database_required, load_jobs_from_database, upsert_job, upsert_jobs
+from .database import (
+    create_user,
+    database_health,
+    database_required,
+    ensure_account_schema,
+    ensure_application_schema,
+    find_application_by_job_db,
+    get_application_db,
+    list_applications_db,
+    save_application_db,
+    find_user_by_email,
+    get_active_user_resume,
+    get_user_by_id,
+    list_user_resumes,
+    load_jobs_from_database,
+    save_user_resume,
+    upsert_job,
+    upsert_jobs,
+)
 from .ingestion import run_ingestion
-from .ai_chat import chat_with_rag
+from .ai_chat import chat_with_rag, chat_with_rag_stream
+from .llm_client import aclose_clients
 from .matcher import match_resume_to_job
 from .models import (
     ApplicationCreate,
     ApplicationRecord,
+    ApplicationStage,
     ApplicationUpdate,
+    AuthRequest,
+    AuthResponse,
     ChatRequest,
     ChatResponse,
     CompanyDiscoveryRunResult,
@@ -23,12 +50,23 @@ from .models import (
     JobPosting,
     MatchRequest,
     MatchResult,
+    MatchWorkflowTraceResponse,
     ResumeExtractResult,
+    SavedResume,
+    UserPublic,
 )
 from .openai_eval import evaluate_with_openai, openai_configured
 from .resume_parser import extract_resume_text
 from .seed import load_company_sources, load_seed_jobs
 from .source_probe import probe_company_sources
+from .workflow_trace import (
+    finish_workflow_trace,
+    internal_monitoring_requested,
+    parse_trace_step_header,
+    reset_workflow_trace,
+    start_workflow_trace,
+    trace_step,
+)
 
 
 app = FastAPI(
@@ -53,6 +91,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.add_event_handler("shutdown", aclose_clients)
+
+
+try:
+    ensure_account_schema()
+    ensure_application_schema()
+except Exception as exc:
+    if database_required():
+        raise RuntimeError(f"Account schema could not be initialized: {exc}") from exc
+
 def load_jobs_for_app() -> dict[str, JobPosting]:
     try:
         database_jobs = load_jobs_from_database()
@@ -69,6 +117,84 @@ def load_jobs_for_app() -> dict[str, JobPosting]:
 
 jobs: dict[str, JobPosting] = load_jobs_for_app()
 applications: dict[str, ApplicationRecord] = {}
+
+
+applications_logger = logging.getLogger("app.applications")
+
+
+# Applications persist to PostgreSQL; the in-memory dict is only the demo-mode
+# fallback when the database is unavailable and not required.
+def store_list_applications() -> list[ApplicationRecord]:
+    try:
+        return list_applications_db()
+    except Exception as exc:
+        if database_required():
+            raise
+        applications_logger.warning("applications DB unavailable, using memory: %s", exc)
+        return list(applications.values())
+
+
+def store_get_application(application_id: str) -> ApplicationRecord | None:
+    try:
+        return get_application_db(application_id)
+    except Exception as exc:
+        if database_required():
+            raise
+        applications_logger.warning("applications DB unavailable, using memory: %s", exc)
+        return applications.get(application_id)
+
+
+def store_find_application_by_job(job_id: str) -> ApplicationRecord | None:
+    try:
+        return find_application_by_job_db(job_id)
+    except Exception as exc:
+        if database_required():
+            raise
+        applications_logger.warning("applications DB unavailable, using memory: %s", exc)
+        return next((record for record in applications.values() if record.job_id == job_id), None)
+
+
+def store_save_application(record: ApplicationRecord) -> ApplicationRecord:
+    try:
+        return save_application_db(record)
+    except Exception as exc:
+        if database_required():
+            raise
+        applications_logger.warning("applications DB unavailable, using memory: %s", exc)
+        applications[record.id] = record
+        return record
+
+
+def token_from_header(authorization: str | None) -> str | None:
+    if not authorization:
+        return None
+    scheme, _, token = authorization.partition(" ")
+    if scheme.lower() != "bearer" or not token:
+        return None
+    return token
+
+
+def current_user(authorization: str | None = Header(default=None)) -> UserPublic:
+    token = token_from_header(authorization)
+    if not token:
+        raise HTTPException(status_code=401, detail="Log in to continue.")
+
+    user_id = verify_access_token(token)
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Session expired. Log in again.")
+
+    user = get_user_by_id(user_id)
+    if not user:
+        raise HTTPException(status_code=401, detail="User no longer exists.")
+    return user
+
+
+def optional_user(authorization: str | None = Header(default=None)) -> UserPublic | None:
+    token = token_from_header(authorization)
+    if not token:
+        return None
+    user_id = verify_access_token(token)
+    return get_user_by_id(user_id) if user_id else None
 
 
 @app.get("/health")
@@ -89,6 +215,39 @@ def health() -> dict[str, str]:
         "sources_total": str(len(sources)),
         "sources_enabled": str(len([source for source in sources if source.enabled])),
     }
+
+
+@app.post("/auth/register", response_model=AuthResponse)
+def register(payload: AuthRequest) -> AuthResponse:
+    try:
+        user = create_user(payload.email, payload.name, hash_password(payload.password))
+    except psycopg.errors.UniqueViolation as exc:
+        raise HTTPException(status_code=409, detail="An account already exists for this email.") from exc
+
+    return AuthResponse(token=create_access_token(user.id), user=user)
+
+
+@app.post("/auth/login", response_model=AuthResponse)
+def login(payload: AuthRequest) -> AuthResponse:
+    record = find_user_by_email(payload.email)
+    if not record:
+        raise HTTPException(status_code=401, detail="Email or password is incorrect.")
+
+    user, password_hash = record
+    if not verify_password(payload.password, password_hash):
+        raise HTTPException(status_code=401, detail="Email or password is incorrect.")
+
+    return AuthResponse(token=create_access_token(user.id), user=user)
+
+
+@app.get("/auth/me", response_model=UserPublic)
+def me(user: UserPublic = Depends(current_user)) -> UserPublic:
+    return user
+
+
+@app.get("/resumes", response_model=list[SavedResume])
+def resumes(user: UserPublic = Depends(current_user)) -> list[SavedResume]:
+    return list_user_resumes(user.id)
 
 
 @app.get("/company-sources", response_model=list[CompanySource])
@@ -171,7 +330,10 @@ def save_job(job: JobPosting) -> JobPosting:
 
 
 @app.post("/resume/extract", response_model=ResumeExtractResult)
-async def extract_resume(file: UploadFile = File(...)) -> ResumeExtractResult:
+async def extract_resume(
+    file: UploadFile = File(...),
+    user: UserPublic | None = Depends(optional_user),
+) -> ResumeExtractResult:
     content = await file.read()
     if not content:
         raise HTTPException(status_code=400, detail="Resume file is empty.")
@@ -184,33 +346,163 @@ async def extract_resume(file: UploadFile = File(...)) -> ResumeExtractResult:
     if len(text) < 80:
         raise HTTPException(status_code=400, detail="Resume text is too short to evaluate.")
 
-    return ResumeExtractResult(filename=file.filename or "resume", content=text)
+    saved_resume: SavedResume | None = None
+    filename = file.filename or "resume"
+    if user:
+        saved_resume = save_user_resume(user.id, filename, text)
+
+    return ResumeExtractResult(
+        filename=filename,
+        content=text,
+        resume_id=saved_resume.id if saved_resume else None,
+        saved=bool(saved_resume),
+    )
 
 
-@app.post("/match", response_model=list[MatchResult])
-def match_jobs(request: MatchRequest) -> list[MatchResult]:
-    selected_jobs = list(jobs.values())
-    if request.job_ids:
-        selected_jobs = [jobs[job_id] for job_id in request.job_ids if job_id in jobs]
+@app.post("/match", response_model=list[MatchResult] | MatchWorkflowTraceResponse)
+def match_jobs(
+    request: MatchRequest,
+    x_jobtrace_monitoring: str | None = Header(default=None, alias="x-jobtrace-monitoring"),
+    x_jobtrace_internal_steps: str | None = Header(default=None, alias="x-jobtrace-internal-steps"),
+    x_jobtrace_run_id: str | None = Header(default=None, alias="x-jobtrace-run-id"),
+) -> list[MatchResult] | MatchWorkflowTraceResponse:
+    enabled = internal_monitoring_requested(x_jobtrace_monitoring)
+    token = start_workflow_trace(
+        enabled=enabled,
+        selected_steps=parse_trace_step_header(x_jobtrace_internal_steps),
+        run_id=x_jobtrace_run_id,
+        level=x_jobtrace_monitoring or "external",
+    )
+    try:
+        if enabled:
+            with trace_step("workflow_total", {"route": "/match"}):
+                results = run_match_workflow(request)
+        else:
+            results = run_match_workflow(request)
+
+        workflow_trace = finish_workflow_trace()
+        if workflow_trace:
+            return MatchWorkflowTraceResponse(results=results, workflow_trace=workflow_trace)
+        return results
+    finally:
+        reset_workflow_trace(token)
+
+
+def run_match_workflow(request: MatchRequest) -> list[MatchResult]:
+    with trace_step("select_jobs", {"requested_job_ids": len(request.job_ids or [])}):
+        selected_jobs = list(jobs.values())
+        if request.job_ids:
+            selected_jobs = [jobs[job_id] for job_id in request.job_ids if job_id in jobs]
 
     if not selected_jobs:
         raise HTTPException(status_code=404, detail="No matching jobs found.")
 
-    results = [match_resume_to_job(request.resume, job) for job in selected_jobs]
+    with trace_step("match_resume", {"job_count": len(selected_jobs)}):
+        results = [match_resume_to_job(request.resume, job) for job in selected_jobs]
     if request.use_ai and openai_configured():
-        results = [evaluate_with_openai(request.resume, result.job, result) for result in results]
+        with trace_step("ai_evaluation", {"job_count": len(results), "provider": "openai"}):
+            results = [evaluate_with_openai(request.resume, result.job, result) for result in results]
 
-    return sorted(results, key=lambda result: result.score, reverse=True)
+    with trace_step("sort_results", {"result_count": len(results)}):
+        return sorted(results, key=lambda result: result.score, reverse=True)
 
 
 @app.post("/chat", response_model=ChatResponse)
-def chat(request: ChatRequest) -> ChatResponse:
-    return chat_with_rag(request, list(jobs.values()))
+async def chat(
+    request: ChatRequest,
+    user: UserPublic | None = Depends(optional_user),
+    x_jobtrace_monitoring: str | None = Header(default=None, alias="x-jobtrace-monitoring"),
+    x_jobtrace_internal_steps: str | None = Header(default=None, alias="x-jobtrace-internal-steps"),
+    x_jobtrace_run_id: str | None = Header(default=None, alias="x-jobtrace-run-id"),
+) -> ChatResponse:
+    request = request_with_user_resume(request, user)
+    enabled = internal_monitoring_requested(x_jobtrace_monitoring)
+    token = start_workflow_trace(
+        enabled=enabled,
+        selected_steps=parse_trace_step_header(x_jobtrace_internal_steps),
+        run_id=x_jobtrace_run_id,
+        level=x_jobtrace_monitoring or "external",
+    )
+    try:
+        if enabled:
+            with trace_step("workflow_total", {"route": "/chat"}):
+                response = await chat_with_rag(request, list(jobs.values()), action_executor=execute_application_action_from_chat)
+        else:
+            response = await chat_with_rag(request, list(jobs.values()), action_executor=execute_application_action_from_chat)
+
+        workflow_trace = finish_workflow_trace()
+        if workflow_trace:
+            return response.model_copy(update={"workflow_trace": workflow_trace})
+        return response
+    finally:
+        reset_workflow_trace(token)
+
+
+@app.post("/chat/stream")
+async def stream_chat(request: ChatRequest, user: UserPublic | None = Depends(optional_user)) -> StreamingResponse:
+    request = request_with_user_resume(request, user)
+    return StreamingResponse(
+        chat_with_rag_stream(request, list(jobs.values()), action_executor=execute_application_action_from_chat),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",
+        },
+    )
+
+
+def request_with_user_resume(request: ChatRequest, user: UserPublic | None) -> ChatRequest:
+    if request.resume_context.strip() or not user:
+        return request
+    resume = get_active_user_resume(user.id)
+    if not resume:
+        return request
+    return request.model_copy(update={"resume_context": resume.content})
+
+
+def execute_application_action_from_chat(payload: dict[str, Any]) -> dict[str, Any]:
+    job_id = str(payload.get("job_id", ""))
+    if job_id not in jobs:
+        raise ValueError(f"Job not found: {job_id}")
+
+    stage = ApplicationStage(str(payload.get("stage", "saved")))
+    notes = str(payload.get("notes", ""))
+    follow_up_on = payload.get("follow_up_on")
+
+    existing = store_find_application_by_job(job_id)
+    if existing:
+        updated = existing.model_copy(
+            update={
+                "stage": stage,
+                "notes": notes or existing.notes,
+                "follow_up_on": str(follow_up_on) if follow_up_on else existing.follow_up_on,
+            }
+        )
+        store_save_application(updated)
+        return {
+            "status": "success",
+            "action": "updated",
+            "record": updated.model_dump(mode="json"),
+        }
+
+    record = ApplicationRecord(
+        id=str(uuid4()),
+        job_id=job_id,
+        stage=stage,
+        notes=notes,
+        follow_up_on=str(follow_up_on) if follow_up_on else None,
+    )
+    store_save_application(record)
+    return {
+        "status": "success",
+        "action": "created",
+        "record": record.model_dump(mode="json"),
+    }
 
 
 @app.get("/applications", response_model=list[ApplicationRecord])
 def list_applications() -> list[ApplicationRecord]:
-    return list(applications.values())
+    return store_list_applications()
 
 
 @app.post("/applications", response_model=ApplicationRecord)
@@ -225,16 +517,15 @@ def create_application(payload: ApplicationCreate) -> ApplicationRecord:
         notes=payload.notes,
         follow_up_on=payload.follow_up_on,
     )
-    applications[record.id] = record
-    return record
+    return store_save_application(record)
 
 
 @app.patch("/applications/{application_id}", response_model=ApplicationRecord)
 def update_application(application_id: str, payload: ApplicationUpdate) -> ApplicationRecord:
-    if application_id not in applications:
+    existing = store_get_application(application_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Application not found.")
 
-    existing = applications[application_id]
     updated = existing.model_copy(
         update={
             "stage": payload.stage if payload.stage is not None else existing.stage,
@@ -242,8 +533,7 @@ def update_application(application_id: str, payload: ApplicationUpdate) -> Appli
             "follow_up_on": payload.follow_up_on,
         }
     )
-    applications[application_id] = updated
-    return updated
+    return store_save_application(updated)
 
 
 def filter_jobs(query: str = "", location: str = "", audience: str = "") -> list[JobPosting]:

@@ -1,5 +1,16 @@
 import { fallbackJobs } from "./sampleData";
-import type { ChatResponse, CompanySource, JobFeedResponse, JobPosting, MatchResult, ResumeExtractResult } from "./types";
+import type {
+  AuthResponse,
+  ChatResponse,
+  ChatHistoryMessage,
+  CompanySource,
+  JobFeedResponse,
+  JobPosting,
+  MatchResult,
+  ResumeExtractResult,
+  SavedResume,
+  User
+} from "./types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
@@ -62,6 +73,53 @@ export function fallbackJobById(jobId: string): JobPosting | undefined {
   return fallbackJobs.find((job) => job.id === jobId);
 }
 
+export async function registerAccount(payload: {
+  email: string;
+  password: string;
+  name?: string;
+}): Promise<AuthResponse> {
+  return authRequest("/auth/register", payload);
+}
+
+export async function loginAccount(payload: {
+  email: string;
+  password: string;
+}): Promise<AuthResponse> {
+  return authRequest("/auth/login", payload);
+}
+
+export async function fetchCurrentUser(token: string): Promise<User> {
+  const response = await fetch(`${API_URL}/auth/me`, {
+    headers: authHeaders(token)
+  });
+  if (!response.ok) {
+    throw new Error(await apiErrorMessage(response, "Session check failed"));
+  }
+  return (await response.json()) as User;
+}
+
+export async function fetchSavedResumes(token: string): Promise<SavedResume[]> {
+  const response = await fetch(`${API_URL}/resumes`, {
+    headers: authHeaders(token)
+  });
+  if (!response.ok) {
+    throw new Error(await apiErrorMessage(response, "Resume request failed"));
+  }
+  return (await response.json()) as SavedResume[];
+}
+
+async function authRequest(path: string, payload: { email: string; password: string; name?: string }) {
+  const response = await fetch(`${API_URL}${path}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+  if (!response.ok) {
+    throw new Error(await apiErrorMessage(response, "Authentication failed"));
+  }
+  return (await response.json()) as AuthResponse;
+}
+
 export async function fetchJobFeed(payload: {
   cursor?: number;
   limit?: number;
@@ -102,12 +160,13 @@ export async function fetchJobById(jobId: string): Promise<JobPosting> {
   return normalizeJob((await response.json()) as Record<string, unknown>);
 }
 
-export async function extractResume(file: File): Promise<ResumeExtractResult> {
+export async function extractResume(file: File, token?: string): Promise<ResumeExtractResult> {
   const formData = new FormData();
   formData.set("file", file);
 
   const response = await fetch(`${API_URL}/resume/extract`, {
     method: "POST",
+    headers: authHeaders(token),
     body: formData
   });
 
@@ -118,7 +177,9 @@ export async function extractResume(file: File): Promise<ResumeExtractResult> {
   const data = (await response.json()) as Record<string, unknown>;
   return {
     filename: String(data.filename ?? file.name),
-    content: String(data.content ?? "")
+    content: String(data.content ?? ""),
+    resume_id: typeof data.resume_id === "string" ? data.resume_id : null,
+    saved: Boolean(data.saved)
   };
 }
 
@@ -153,16 +214,24 @@ export async function askJobCopilot(payload: {
   question: string;
   resume_context?: string;
   conversation_id?: string;
+  messages?: ChatHistoryMessage[];
+  job_ids?: string[];
   top_k?: number;
   use_llm?: boolean;
+  token?: string;
 }): Promise<ChatResponse> {
   const response = await fetch(`${API_URL}/chat`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      ...authHeaders(payload.token)
+    },
     body: JSON.stringify({
       question: payload.question,
       resume_context: payload.resume_context ?? "",
       conversation_id: payload.conversation_id ?? "web",
+      messages: payload.messages ?? [],
+      job_ids: payload.job_ids,
       top_k: payload.top_k ?? 5,
       use_llm: payload.use_llm ?? true
     })
@@ -173,6 +242,129 @@ export async function askJobCopilot(payload: {
   }
 
   return (await response.json()) as ChatResponse;
+}
+
+export async function streamJobCopilot(
+  payload: {
+    question: string;
+    resume_context?: string;
+    conversation_id?: string;
+    messages?: ChatHistoryMessage[];
+    job_ids?: string[];
+    top_k?: number;
+    use_llm?: boolean;
+    token?: string;
+  },
+  handlers: {
+    onChunk?: (content: string) => void;
+    onDone?: (response: ChatResponse) => void;
+  } = {}
+): Promise<ChatResponse> {
+  const response = await fetch(`${API_URL}/chat/stream`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...authHeaders(payload.token)
+    },
+    body: JSON.stringify({
+      question: payload.question,
+      resume_context: payload.resume_context ?? "",
+      conversation_id: payload.conversation_id ?? "web",
+      messages: payload.messages ?? [],
+      job_ids: payload.job_ids,
+      top_k: payload.top_k ?? 5,
+      use_llm: payload.use_llm ?? true
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error(await apiErrorMessage(response, "Chat request failed"));
+  }
+
+  const reader = response.body?.getReader();
+  if (!reader) {
+    throw new Error("Chat request failed: streaming is not available in this browser.");
+  }
+
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let finalResponse: ChatResponse | null = null;
+
+  while (true) {
+    const { value, done } = await reader.read();
+    buffer += decoder.decode(value, { stream: !done });
+
+    let boundary = buffer.indexOf("\n\n");
+    while (boundary !== -1) {
+      const block = buffer.slice(0, boundary);
+      buffer = buffer.slice(boundary + 2);
+      handleStreamEvent(block, handlers, (responsePayload) => {
+        finalResponse = responsePayload;
+      });
+      boundary = buffer.indexOf("\n\n");
+    }
+
+    if (done) break;
+  }
+
+  if (buffer.trim()) {
+    handleStreamEvent(buffer, handlers, (responsePayload) => {
+      finalResponse = responsePayload;
+    });
+  }
+
+  if (!finalResponse) {
+    throw new Error("Chat request ended before the final response arrived.");
+  }
+
+  return finalResponse;
+}
+
+function handleStreamEvent(
+  block: string,
+  handlers: {
+    onChunk?: (content: string) => void;
+    onDone?: (response: ChatResponse) => void;
+  },
+  setFinalResponse: (response: ChatResponse) => void
+) {
+  const event = parseServerSentEvent(block);
+  if (!event) return;
+
+  const payload = JSON.parse(event.data) as Record<string, unknown>;
+  if (event.event === "chunk") {
+    if (typeof payload.content === "string") {
+      handlers.onChunk?.(payload.content);
+    }
+    return;
+  }
+
+  if (event.event === "done") {
+    const responsePayload = payload as ChatResponse;
+    handlers.onDone?.(responsePayload);
+    setFinalResponse(responsePayload);
+  }
+}
+
+function parseServerSentEvent(block: string): { event: string; data: string } | null {
+  const lines = block.split(/\r?\n/);
+  let event = "message";
+  const data: string[] = [];
+
+  for (const line of lines) {
+    if (line.startsWith("event:")) {
+      event = line.slice("event:".length).trim();
+    } else if (line.startsWith("data:")) {
+      data.push(line.slice("data:".length).trimStart());
+    }
+  }
+
+  if (!data.length) return null;
+  return { event, data: data.join("\n") };
+}
+
+function authHeaders(token?: string): Record<string, string> {
+  return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
 async function apiErrorMessage(response: Response, fallback: string) {
