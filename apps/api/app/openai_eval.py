@@ -1,9 +1,8 @@
 import json
 import os
-import urllib.error
-import urllib.request
 from typing import Any
 
+from .llm_client import post_json, post_json_async
 from .models import JobPosting, MatchResult, ResumeInput
 
 
@@ -82,7 +81,7 @@ def evaluate_with_openai(resume: ResumeInput, job: JobPosting, base: MatchResult
     try:
         raw = call_responses_api(api_key, request_body)
         parsed = json.loads(extract_output_text(raw))
-    except (OSError, ValueError, KeyError, json.JSONDecodeError, urllib.error.URLError):
+    except (OSError, ValueError, KeyError, json.JSONDecodeError):
         return base.model_copy(update={"evaluation_source": "local"})
 
     return base.model_copy(
@@ -100,18 +99,25 @@ def evaluate_with_openai(resume: ResumeInput, job: JobPosting, base: MatchResult
 
 
 def call_responses_api(api_key: str, body: dict[str, Any]) -> dict[str, Any]:
-    request = urllib.request.Request(
+    return post_json(
         OPENAI_RESPONSES_URL,
-        data=json.dumps(body).encode("utf-8"),
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
-        method="POST",
+        headers={"Authorization": f"Bearer {api_key}"},
+        body=body,
+        timeout=45,
+        service="openai-responses",
+        model=str(body.get("model", "")),
     )
 
-    with urllib.request.urlopen(request, timeout=45) as response:
-        return json.loads(response.read().decode("utf-8"))
+
+async def call_responses_api_async(api_key: str, body: dict[str, Any]) -> dict[str, Any]:
+    return await post_json_async(
+        OPENAI_RESPONSES_URL,
+        headers={"Authorization": f"Bearer {api_key}"},
+        body=body,
+        timeout=45,
+        service="openai-responses",
+        model=str(body.get("model", "")),
+    )
 
 
 def extract_output_text(response: dict[str, Any]) -> str:
