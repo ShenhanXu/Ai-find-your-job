@@ -16,3 +16,4 @@ coverage/
 *.log
 postgres-data/
 redis-data/
+.claude/settings.local.json

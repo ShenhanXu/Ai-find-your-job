@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "api",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "cd '/Users/shenhanxu/Documents/找工/Ai find your job/apps/api' && set -a && source '/Users/shenhanxu/Documents/找工/Ai find your job/.env.local' && set +a && exec '/Users/shenhanxu/Documents/找工/Ai find your job/.venv/bin/python' -m uvicorn app.main:app --host 127.0.0.1 --port 8000"
+      ],
+      "port": 8000
+    },
+    {
+      "name": "web",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "cd '/Users/shenhanxu/Documents/找工/Ai find your job/apps/web' && exec npm run dev"
+      ],
+      "port": 3000
+    }
+  ]
+}

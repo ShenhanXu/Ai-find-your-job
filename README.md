@@ -4,7 +4,10 @@ A local-first job board prototype for browsing Seattle-area software engineering
 
 ## Current Scope
 
-- 100 seeded software job listings stored in PostgreSQL.
+- Live job listings ingested from 36 real Greenhouse/Lever boards by a distributed pipeline
+  (scheduler → Redis Streams → crawl workers → idempotent upserter → incremental embedder);
+  see [apps/ingestion](apps/ingestion/README.md) and [docs/INGESTION_PIPELINE_DESIGN.md](docs/INGESTION_PIPELINE_DESIGN.md).
+- Priority sources re-crawl every 30 minutes; postings a company takes down are auto-closed.
 - Search by company, title, description, level, work mode, and skills.
 - Filter by Seattle-area location.
 - Filter for all roles, new grad / entry roles, or internships.
@@ -14,7 +17,8 @@ A local-first job board prototype for browsing Seattle-area software engineering
 - Stream chat answers into a single AI bubble as the LLM generates text.
 - Render generative UI workflow blocks from copilot tool outputs: comparison cards, skill-gap matrix, resume checklist, and actions.
 - Expose job search, job detail lookup, and application action preparation through an MCP-compatible stdio server.
-- Use `data/seed_jobs.json` only as seed input for PostgreSQL.
+- Use `data/seed_jobs.json` only as a demo-mode fallback when no database is available;
+  retire seed rows with `python -m ingestion.retire_seed` once real data is flowing.
 
 ## Tech Stack
 
