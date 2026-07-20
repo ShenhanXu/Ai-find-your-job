@@ -116,3 +116,16 @@ CREATE INDEX IF NOT EXISTS job_postings_embedding_idx
   ON job_postings
   USING ivfflat (embedding vector_cosine_ops)
   WITH (lists = 100);
+
+-- Ingestion pipeline columns (idempotent so this file stays rerunnable on existing databases).
+ALTER TABLE job_postings ADD COLUMN IF NOT EXISTS status TEXT NOT NULL DEFAULT 'open';
+ALTER TABLE job_postings ADD COLUMN IF NOT EXISTS source_id TEXT;
+ALTER TABLE job_postings ADD COLUMN IF NOT EXISTS first_seen_at TIMESTAMPTZ NOT NULL DEFAULT now();
+ALTER TABLE job_postings ADD COLUMN IF NOT EXISTS last_seen_at TIMESTAMPTZ NOT NULL DEFAULT now();
+CREATE INDEX IF NOT EXISTS job_postings_status_idx ON job_postings(status);
+CREATE INDEX IF NOT EXISTS job_postings_source_id_idx ON job_postings(source_id);
+
+ALTER TABLE company_sources ADD COLUMN IF NOT EXISTS last_enqueued_at TIMESTAMPTZ;
+ALTER TABLE company_sources ADD COLUMN IF NOT EXISTS last_success_at TIMESTAMPTZ;
+ALTER TABLE company_sources ADD COLUMN IF NOT EXISTS last_error TEXT;
+ALTER TABLE company_sources ADD COLUMN IF NOT EXISTS last_error_at TIMESTAMPTZ;
