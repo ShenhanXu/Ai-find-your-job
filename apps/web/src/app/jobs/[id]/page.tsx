@@ -105,7 +105,7 @@ export default function JobDetailPage() {
 
           {job.sourceUrl ? (
             <a className="applyPrimary" href={job.sourceUrl} target="_blank" rel="noreferrer">
-              Search application source
+              View original posting
               <ExternalLink size={18} />
             </a>
           ) : null}

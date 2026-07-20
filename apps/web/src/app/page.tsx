@@ -806,7 +806,7 @@ export default function Home() {
               </Link>
               {job.sourceUrl ? (
                 <a className="applyLink" href={job.sourceUrl} target="_blank" rel="noreferrer">
-                  Search source
+                  View posting
                   <ExternalLink size={16} />
                 </a>
               ) : null}

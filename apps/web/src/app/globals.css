@@ -1070,6 +1070,10 @@ textarea {
   color: var(--ink);
   font-size: 17px;
   line-height: 1.48;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .feedActions {
