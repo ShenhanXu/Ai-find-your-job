@@ -37,3 +37,27 @@ def test_ingestion_adds_fixture_jobs_and_is_incremental():
     assert second.jobs_unchanged >= first.jobs_seen
     assert any(job.company == "Pacific AI Labs" for job in existing.values())
     assert any(job.company == "Cascade Cloud" for job in existing.values())
+
+
+def test_clean_html_strips_escaped_greenhouse_markup():
+    from app.ingestion import clean_html
+
+    escaped = "&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Senior PM&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Build &amp;amp; ship.&lt;/p&gt;"
+    assert clean_html(escaped) == "Senior PM Build & ship."
+
+
+def test_clean_html_strips_plain_markup():
+    from app.ingestion import clean_html
+
+    assert clean_html("<p>Build <b>Python</b> services.</p>") == "Build Python services."
+
+
+def test_infer_level_word_boundaries_and_title_priority():
+    from app.ingestion import infer_level
+
+    assert infer_level("Senior Product Manager", "our internal tools and international teams") == "senior"
+    assert infer_level("Software Engineer Intern", "work with senior engineers") == "intern"
+    assert infer_level("Software Engineer", "join our internship program") == "intern"
+    assert infer_level("Software Engineer II", "backend role") == "mid"
+    assert infer_level("Software Engineer I", "backend role") == "new-grad"
+    assert infer_level("Software Engineer", "backend role in Seattle") == "mid"

@@ -390,15 +390,17 @@ def infer_nice_skills(required: list[str]) -> list[str]:
 
 
 def infer_level(title: str, description: str) -> str:
-    text = f"{title} {description}".lower()
-    if "intern" in text:
-        return "intern"
-    if "new grad" in text or "university grad" in text or "graduate" in text or "software engineer i" in text:
-        return "new-grad"
-    if "senior" in text or "staff" in text or "principal" in text:
-        return "senior"
-    if "associate" in text or "entry" in text:
-        return "entry"
+    # Title outranks description ("Senior PM" mentioning an internship program is
+    # senior); \b keeps "internal"/"international" from reading as intern.
+    for text in (title.lower(), description.lower()):
+        if re.search(r"\bintern(ship)?s?\b", text):
+            return "intern"
+        if "new grad" in text or "university grad" in text or "graduate" in text or re.search(r"\bsoftware engineer i\b", text):
+            return "new-grad"
+        if "senior" in text or "staff" in text or "principal" in text:
+            return "senior"
+        if "associate" in text or "entry" in text:
+            return "entry"
     return "mid"
 
 
@@ -412,7 +414,11 @@ def infer_work_mode(location: str, description: str) -> str:
 
 
 def clean_html(value: str) -> str:
-    without_tags = re.sub(r"<[^>]+>", " ", value)
+    # Greenhouse ships `content` HTML-escaped: unescape BEFORE stripping, or the
+    # regex sees &lt;p&gt; instead of tags and the markup survives into the
+    # description (and into the embedding text).
+    unescaped = html.unescape(value)
+    without_tags = re.sub(r"<[^>]+>", " ", unescaped)
     normalized = re.sub(r"\s+", " ", html.unescape(without_tags)).strip()
     return normalized
 
