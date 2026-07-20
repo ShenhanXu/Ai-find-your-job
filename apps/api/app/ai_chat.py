@@ -115,6 +115,9 @@ class LocalEmbeddingProvider:
 
         return normalize_vector(vector)
 
+    def embed_batch(self, texts: list[str]) -> list[list[float]]:
+        return [self.embed(text) for text in texts]
+
 
 class OpenAIEmbeddingProvider:
     source = "openai-embeddings"
@@ -137,6 +140,21 @@ class OpenAIEmbeddingProvider:
         )
         embedding = payload["data"][0]["embedding"]
         return normalize_vector([float(value) for value in embedding])
+
+    def embed_batch(self, texts: list[str]) -> list[list[float]]:
+        if not self.api_key:
+            raise RuntimeError("OPENAI_API_KEY is not configured.")
+
+        payload = post_json(
+            OPENAI_EMBEDDINGS_URL,
+            headers={"Authorization": f"Bearer {self.api_key}"},
+            body={"model": self.model, "input": [text[:12000] for text in texts]},
+            timeout=60,
+            service="openai-embeddings",
+            model=self.model,
+        )
+        rows = sorted(payload["data"], key=lambda row: row["index"])
+        return [normalize_vector([float(value) for value in row["embedding"]]) for row in rows]
 
 
 class GeminiEmbeddingProvider:
@@ -182,6 +200,32 @@ class JinaEmbeddingProvider:
 
     def embed_document(self, text: str) -> list[float]:
         return self._embed(text, task="retrieval.passage")
+
+    def embed_batch(self, texts: list[str]) -> list[list[float]]:
+        if not self.api_key:
+            raise RuntimeError("JINA_API_KEY is not configured.")
+
+        payload = post_json(
+            JINA_EMBEDDINGS_URL,
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Accept": "application/json",
+                "User-Agent": "ai-job-match/0.1 (+https://localhost)",
+            },
+            body={
+                "model": self.model,
+                "input": [text[:32000] for text in texts],
+                "task": "retrieval.passage",
+                "dimensions": self.dimensions,
+                "normalized": True,
+                "embedding_type": "float",
+            },
+            timeout=120,
+            service="jina-embeddings",
+            model=self.model,
+        )
+        rows = sorted(payload["data"], key=lambda row: row["index"])
+        return [normalize_vector([float(value) for value in row["embedding"]]) for row in rows]
 
     def _embed(self, text: str, task: str) -> list[float]:
         if not self.api_key:

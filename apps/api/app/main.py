@@ -1,5 +1,6 @@
 import logging
 import os
+import time
 from typing import Any
 from uuid import uuid4
 
@@ -16,6 +17,7 @@ from .database import (
     database_required,
     ensure_account_schema,
     ensure_application_schema,
+    ensure_pipeline_schema,
     find_application_by_job_db,
     get_application_db,
     list_applications_db,
@@ -56,6 +58,7 @@ from .models import (
     UserPublic,
 )
 from .openai_eval import evaluate_with_openai, openai_configured
+from .pipeline_admin import router as pipeline_router
 from .resume_parser import extract_resume_text
 from .seed import load_company_sources, load_seed_jobs
 from .source_probe import probe_company_sources
@@ -92,11 +95,13 @@ app.add_middleware(
 )
 
 app.add_event_handler("shutdown", aclose_clients)
+app.include_router(pipeline_router)
 
 
 try:
     ensure_account_schema()
     ensure_application_schema()
+    ensure_pipeline_schema()
 except Exception as exc:
     if database_required():
         raise RuntimeError(f"Account schema could not be initialized: {exc}") from exc
@@ -117,6 +122,27 @@ def load_jobs_for_app() -> dict[str, JobPosting]:
 
 jobs: dict[str, JobPosting] = load_jobs_for_app()
 applications: dict[str, ApplicationRecord] = {}
+
+JOBS_CACHE_TTL_SECONDS = int(os.getenv("JOBS_CACHE_TTL_SECONDS", "60"))
+_jobs_refreshed_at = time.monotonic()
+
+
+def refresh_jobs_cache(force: bool = False) -> None:
+    """Pull jobs written by the ingestion pipeline into the in-memory cache.
+
+    The pipeline workers write to Postgres out-of-process, so this API would
+    otherwise serve its startup snapshot forever."""
+    global _jobs_refreshed_at
+    if not force and time.monotonic() - _jobs_refreshed_at < JOBS_CACHE_TTL_SECONDS:
+        return
+    _jobs_refreshed_at = time.monotonic()
+    try:
+        database_jobs = load_jobs_from_database()
+    except Exception:
+        return
+    if database_jobs:
+        jobs.clear()
+        jobs.update({job.id: job for job in database_jobs})
 
 
 applications_logger = logging.getLogger("app.applications")
@@ -317,6 +343,7 @@ def run_job_ingestion() -> IngestionRunResult:
 
 @app.get("/jobs/{job_id}", response_model=JobPosting)
 def get_job(job_id: str) -> JobPosting:
+    refresh_jobs_cache()
     if job_id not in jobs:
         raise HTTPException(status_code=404, detail="Job not found.")
     return jobs[job_id]
@@ -389,6 +416,7 @@ def match_jobs(
 
 
 def run_match_workflow(request: MatchRequest) -> list[MatchResult]:
+    refresh_jobs_cache()
     with trace_step("select_jobs", {"requested_job_ids": len(request.job_ids or [])}):
         selected_jobs = list(jobs.values())
         if request.job_ids:
@@ -415,6 +443,7 @@ async def chat(
     x_jobtrace_internal_steps: str | None = Header(default=None, alias="x-jobtrace-internal-steps"),
     x_jobtrace_run_id: str | None = Header(default=None, alias="x-jobtrace-run-id"),
 ) -> ChatResponse:
+    refresh_jobs_cache()
     request = request_with_user_resume(request, user)
     enabled = internal_monitoring_requested(x_jobtrace_monitoring)
     token = start_workflow_trace(
@@ -440,6 +469,7 @@ async def chat(
 
 @app.post("/chat/stream")
 async def stream_chat(request: ChatRequest, user: UserPublic | None = Depends(optional_user)) -> StreamingResponse:
+    refresh_jobs_cache()
     request = request_with_user_resume(request, user)
     return StreamingResponse(
         chat_with_rag_stream(request, list(jobs.values()), action_executor=execute_application_action_from_chat),
@@ -537,6 +567,7 @@ def update_application(application_id: str, payload: ApplicationUpdate) -> Appli
 
 
 def filter_jobs(query: str = "", location: str = "", audience: str = "") -> list[JobPosting]:
+    refresh_jobs_cache()
     query_lower = query.lower().strip()
     location_lower = location.lower().strip()
     audience_lower = audience.lower().strip()
